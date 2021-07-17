@@ -22,12 +22,12 @@
 
 
     <ScrollView>
-        <Grid RowDefinitions="56*,44*">
+        <Grid RowDefinitions="*,Auto">
             <!--#region Image Sector-->
             <Grid
                 Grid.Row="0"
                 BackgroundColor="{StaticResource col_prim}"
-                ColumnDefinitions="24*,2*,50*,24*"
+                ColumnDefinitions="27*,2*,44*,27*"
                 RowDefinitions="15*,72*,13*">
 
                 <yummy:PancakeView

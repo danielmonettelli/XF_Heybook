@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XF_HeyBook.Utility;
-using XF_HeyBook.ViewModels;
 
 namespace XF_HeyBook.Views
 {

@@ -30,6 +30,7 @@
         Size="21" />
     <!--#endregion-->
 
+    <!--#region FontImageSource INTERFACES-->
     <FontImageSource
         x:Key="icon_moore"
         FontFamily="CustomFontIcons"
@@ -63,5 +64,6 @@
         Glyph="{x:Static FontIcons:CustomFontIcons.icon_pause}"
         Size="15.77"
         Color="{StaticResource col_ter}" />
+    <!--#endregion-->
 
 </ResourceDictionary>

@@ -84,7 +84,6 @@
                                     <ffimageloadingsvg:SvgCachedImage
                                         Grid.RowSpan="4"
                                         Grid.ColumnSpan="4"
-                                        xct:TouchEffect.AnimationDuration="200"
                                         Aspect="AspectFill"
                                         CacheType="All"
                                         Source="{Binding Image_Book}" />
