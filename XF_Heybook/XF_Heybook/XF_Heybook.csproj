@@ -11,6 +11,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\FontFamily\Montserrat-Black.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-Bold.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-Medium.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-Regular.ttf" />
+    <None Remove="Resources\FontFamily\Montserrat-SemiBold.ttf" />
+    <None Remove="Resources\FontIcons\customfonticons.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-Black.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-Bold.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-Medium.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-Regular.ttf" />
+    <EmbeddedResource Include="Resources\FontFamily\Montserrat-SemiBold.ttf" />
+    <EmbeddedResource Include="Resources\FontIcons\customfonticons.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="PropertyChanged.Fody" Version="3.4.0" />
     <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
     <PackageReference Include="Sharpnado.MaterialFrame" Version="1.1.4" />

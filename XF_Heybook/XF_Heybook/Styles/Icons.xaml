@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:FontIcons="clr-namespace:XF_HeyBook.CodeFontIcons;assembly=XF_HeyBook">
+
+    <!--#region FontImageSource TABS-->
+    <FontImageSource
+        x:Key="icon_tab_books"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_books}"
+        Size="21" />
+
+    <FontImageSource
+        x:Key="icon_tab_saved"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_saved}"
+        Size="21" />
+
+    <FontImageSource
+        x:Key="icon_tab_audio"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_audio}"
+        Size="21" />
+
+    <FontImageSource
+        x:Key="icon_tab_profile"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_profile}"
+        Size="21" />
+    <!--#endregion-->
+
+    <FontImageSource
+        x:Key="icon_moore"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_moore}"
+        Size="4"
+        Color="{StaticResource col_sec}" />
+
+    <FontImageSource
+        x:Key="icon_star"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_star}"
+        Size="12.8" />
+
+    <FontImageSource
+        x:Key="icon_left_arrow_line"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_left_arrow_line}"
+        Size="26"
+        Color="{StaticResource col_sec}" />
+
+    <FontImageSource
+        x:Key="icon_play"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_play}"
+        Size="15.77"
+        Color="{StaticResource col_qui}" />
+
+    <FontImageSource
+        x:Key="icon_pause"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_pause}"
+        Size="15.77"
+        Color="{StaticResource col_ter}" />
+
+</ResourceDictionary>
