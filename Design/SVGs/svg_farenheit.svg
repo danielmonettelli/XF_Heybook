@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="630" viewBox="0 0 420 630">
+  <g id="svg_farenheit" transform="translate(1438 -2697)">
+    <path id="Trazado_171" data-name="Trazado 171" d="M0,0H420V630H0Z" transform="translate(-1438 2697)" fill="#ff892f"/>
+    <g id="Grupo_396" data-name="Grupo 396" transform="translate(15)">
+      <g id="Grupo_389" data-name="Grupo 389">
+        <ellipse id="Elipse_13" data-name="Elipse 13" cx="10.5" cy="20.5" rx="10.5" ry="20.5" transform="translate(-1249 2822)" fill="#c65452"/>
+        <path id="Trazado_170" data-name="Trazado 170" d="M.112,2.189A13.1,13.1,0,0,0,5.683,3.808a9.521,9.521,0,0,0,4.992-1.618L11,203H0Z" transform="translate(-1244 2858)" fill="#fcffd2"/>
+      </g>
+      <text id="Farenheit_451" data-name="Farenheit 451" transform="translate(-1243 3282)" fill="#f6caaa" font-size="21" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-81.921" y="0">FARENHEIT 451</tspan></text>
+    </g>
+  </g>
+</svg>
