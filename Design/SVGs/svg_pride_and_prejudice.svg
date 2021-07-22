@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="630" viewBox="0 0 420 630">
+  <g id="svg_pride_and_prejudice" transform="translate(2415 -2696)">
+    <rect id="Rectángulo_297" data-name="Rectángulo 297" width="420" height="630" transform="translate(-2415 2696)" fill="#fbded3"/>
+    <g id="Grupo_392" data-name="Grupo 392">
+      <g id="Grupo_387" data-name="Grupo 387" transform="translate(0.857)">
+        <path id="Trazado_141" data-name="Trazado 141" d="M-2224.467,2897.716l18.541-28.583,17.605,30.28s28.993-27.754,35.147-38.273,7.039-16.9,0-27.48-13.721-14.856-26.519-14.856-26.233,13.371-26.233,13.371-13.157-13.742-26.06-13.371-18.719,4.272-25.552,14.856-6.072,21.367-1.783,27.48S-2224.467,2897.716-2224.467,2897.716Z" fill="#ff141a"/>
+        <path id="Trazado_142" data-name="Trazado 142" d="M-2224.467,2897.716l18.541-28.583,17.605,30.28s28.993-27.754,35.147-38.273,7.039-16.9,0-27.48-13.721-14.856-26.519-14.856-26.233,13.371-26.233,13.371-13.157-13.742-26.06-13.371-18.719,4.272-25.552,14.856-6.072,21.367-1.783,27.48S-2224.467,2897.716-2224.467,2897.716Z" transform="matrix(-0.469, 0.883, -0.883, -0.469, -642.356, 6277.64)" fill="#ff141a"/>
+        <path id="Trazado_143" data-name="Trazado 143" d="M38.144,1.7,56.684,30.281,74.29,0s28.993,27.754,35.147,38.273,7.039,16.9,0,27.48S95.716,80.61,82.918,80.61,56.684,67.239,56.684,67.239,43.527,80.981,30.624,80.61,11.905,76.338,5.072,65.754-1,44.386,3.289,38.273,38.144,1.7,38.144,1.7Z" transform="matrix(0.469, 0.883, -0.883, 0.469, -2270.677, 2918.681)" fill="#ff141a"/>
+      </g>
+      <g id="Texts" transform="translate(924 87)">
+        <text id="Pride_and_Prejudice" data-name="Pride and Prejudice" transform="translate(-3129 3172)" fill="#c9a483" font-size="34" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-205.615" y="0">PRIDE AND PREJUDICE</tspan></text>
+        <text id="Jane_Austen" data-name="Jane Austen" transform="translate(-3128 3197)" fill="#c9a483" font-size="9" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-32.26" y="0">JANE AUSTEN</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

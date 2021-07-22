@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="XF_HeyBook.Views.Books.Styles"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+
+    <!--#region Headline1-->
+
+    <!--#endregion-->
+
+
+    <!--#region Headline2-->
+
+    <!--#endregion-->
+
+
+    <!--#region Headline3-->
+
+    <!--#endregion-->
+
+
+    <!--#region Headline4-->
+
+    <!--#endregion-->
+
+
+    <!--#region Headline5-->
+    <Style
+        x:Key="Span_TxtHeadline5_1"
+        TargetType="Span">
+        <Setter Property="FontFamily" Value="Montserrat#700" />
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
+    </Style>
+
+    <Style
+        x:Key="Span_TxtHeadline5_2"
+        TargetType="Span">
+        <Setter Property="FontFamily" Value="Montserrat#400" />
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="TextColor" Value="{StaticResource col_sec}" />
+    </Style>
+    <!--#endregion-->
+
+
+    <!--#region Headline6-->
+    <Style
+        x:Key="TxtHeadline6_1"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#600" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
+        <!--  Shadows  -->
+        <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_ter}" />
+        <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
+        <Setter Property="xct:ShadowEffect.OffsetY" Value="3" />
+        <Setter Property="xct:ShadowEffect.Opacity" Value="0.8" />
+        <Setter Property="xct:ShadowEffect.Radius" Value="6" />
+    </Style>
+    <!--#endregion-->
+
+
+    <!--#region Title-->
+
+    <!--#endregion-->
+
+
+    <!--#region Subtitle1-->
+    <Style
+        x:Key="TxtSubtitle1_1"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#600" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="TextColor" Value="{StaticResource col_sec}" />
+        <!--  Shadows  -->
+        <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_sec}" />
+        <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
+        <Setter Property="xct:ShadowEffect.OffsetY" Value="0" />
+        <Setter Property="xct:ShadowEffect.Opacity" Value="1" />
+        <Setter Property="xct:ShadowEffect.Radius" Value="18" />
+    </Style>
+
+    <Style
+        x:Key="TxtSubtitle1_2"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#400" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="TextColor" Value="{StaticResource col_sec}" />
+        <Setter Property="Opacity" Value="0.7" />
+        <!--  Shadows  -->
+        <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_qui}" />
+        <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
+        <Setter Property="xct:ShadowEffect.OffsetY" Value="3" />
+        <Setter Property="xct:ShadowEffect.Opacity" Value="0.7" />
+        <Setter Property="xct:ShadowEffect.Radius" Value="6" />
+    </Style>
+
+    <Style
+        x:Key="TxtSubtitle1_3"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#600" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
+        <Setter Property="Opacity" Value="0.8" />
+        <!--  Shadows  -->
+        <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_ter}" />
+        <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
+        <Setter Property="xct:ShadowEffect.OffsetY" Value="3" />
+        <Setter Property="xct:ShadowEffect.Opacity" Value="0.7" />
+        <Setter Property="xct:ShadowEffect.Radius" Value="6" />
+    </Style>
+
+    <Style
+        x:Key="TxtSubtitle1_4"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#400" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
+    </Style>
+    <!--#endregion-->
+
+
+    <!--#region Subtitle2-->
+
+    <!--#endregion-->
+
+
+    <!--#region Body1-->
+    <Style
+        x:Key="TxtBody1_2"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#500" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
+    </Style>
+    <!--#endregion-->
+
+
+    <!--#region Body2-->
+    <Style
+        x:Key="TxtBody2_1"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#500" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="{StaticResource col_sec}" />
+    </Style>
+
+    <Style
+        x:Key="TxtBody2_2"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#400" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="{StaticResource col_sec}" />
+        <Setter Property="Opacity" Value="0.5" />
+    </Style>
+
+    <Style
+        x:Key="TxtBody2_3"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#600" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
+    </Style>
+    <!--#endregion-->
+
+
+    <!--#region Button-->
+
+    <!--#endregion-->
+
+
+    <!--#region Caption-->
+
+    <!--#endregion-->
+
+
+    <!--#region Overline1-->
+    <Style
+        x:Key="TxtOverline1_1"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#600" />
+        <Setter Property="FontSize" Value="10" />
+        <Setter Property="TextColor" Value="{StaticResource col_sec}" />
+        <!--  Shadows  -->
+        <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_prim}" />
+        <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
+        <Setter Property="xct:ShadowEffect.OffsetY" Value="3" />
+        <Setter Property="xct:ShadowEffect.Opacity" Value="1" />
+        <Setter Property="xct:ShadowEffect.Radius" Value="6" />
+    </Style>
+    <!--#endregion-->
+
+
+    <!--#region Overline2-->
+    <Style
+        x:Key="TxtOverline2_1"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#400" />
+        <Setter Property="FontSize" Value="8" />
+        <Setter Property="TextColor" Value="{StaticResource col_sec}" />
+        <!--  Shadows  -->
+        <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_sext}" />
+        <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
+        <Setter Property="xct:ShadowEffect.OffsetY" Value="3" />
+        <Setter Property="xct:ShadowEffect.Opacity" Value="1" />
+        <Setter Property="xct:ShadowEffect.Radius" Value="6" />
+    </Style>
+    <!--#endregion-->
+
+
+    <!--#region Visual States Manager-->
+    <Style
+        x:Key="vsm_surfaceCategory"
+        TargetType="Label">
+
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="FontFamily" Value="Montserrat#400" />
+                            <Setter Property="FontSize" Value="16" />
+                            <Setter Property="TextColor" Value="{StaticResource col_sec}" />
+                            <Setter Property="Opacity" Value="0.7" />
+                            <!--  Shadows  -->
+                            <!--<Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_qui}" />-->
+                            <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
+                            <Setter Property="xct:ShadowEffect.OffsetY" Value="3" />
+                            <Setter Property="xct:ShadowEffect.Opacity" Value="0.7" />
+                            <Setter Property="xct:ShadowEffect.Radius" Value="6" />
+                        </VisualState.Setters>
+                    </VisualState>
+
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="FontFamily" Value="Montserrat#600" />
+                            <Setter Property="FontSize" Value="16" />
+                            <Setter Property="TextColor" Value="{StaticResource col_sec}" />
+                            <!--  Shadows  -->
+                            <!--<Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_sec}" />-->
+                            <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
+                            <Setter Property="xct:ShadowEffect.OffsetY" Value="0" />
+                            <Setter Property="xct:ShadowEffect.Opacity" Value="1" />
+                            <Setter Property="xct:ShadowEffect.Radius" Value="18" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="vsm_lineForCategory"
+        TargetType="BoxView">
+
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="IsVisible" Value="False" />
+                        </VisualState.Setters>
+                    </VisualState>
+
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="IsVisible" Value="True" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+    <!--#endregion-->
+
+</ResourceDictionary>

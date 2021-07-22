@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XF_HeyBook.Views.AudioBookDetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:sh="http://sharpnado.com"
+    xmlns:viewmodels="clr-namespace:XF_HeyBook.ViewModels"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    ios:Page.UseSafeArea="true"
+    x:DataType="viewmodels:AudioBookDetailViewModel"
+    BackgroundColor="{StaticResource col_qui}"
+    NavigationPage.HasNavigationBar="False">
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary Source="Styles.xaml" />
+    </ContentPage.Resources>
+
+
+    <ScrollView>
+        <Grid RowDefinitions="*,Auto">
+            <!--#region Image Sector-->
+            <Grid
+                Grid.Row="0"
+                BackgroundColor="{StaticResource col_prim}"
+                ColumnDefinitions="27*,2*,44*,27*"
+                RowDefinitions="15*,72*,13*">
+
+                <yummy:PancakeView
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Padding="0">
+                    <ffimageloadingsvg:SvgCachedImage
+                        Aspect="AspectFill"
+                        CacheDuration="30"
+                        CacheType="All"
+                        FadeAnimationDuration="100"
+                        FadeAnimationEnabled="True"
+                        FadeAnimationForCachedImages="True"
+                        Source="{Binding SelectedBook.Image_Book}" />
+                </yummy:PancakeView>
+
+                <BoxView
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    BackgroundColor="{StaticResource col_sept}"
+                    Opacity="0.57" />
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region Control Sector-->
+            <Grid
+                Grid.Row="1"
+                ColumnDefinitions="5*,45*,Auto,45*,5*"
+                RowDefinitions="32,Auto,10,Auto,8,Auto,34,Auto,12,Auto,46,Auto,12">
+
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3"
+                    HorizontalTextAlignment="Center"
+                    MaxLines="2"
+                    Style="{StaticResource TxtHeadline6_1}"
+                    Text="{Binding SelectedBook.Name_Book}" />
+
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3"
+                    HorizontalTextAlignment="Center"
+                    Style="{StaticResource TxtSubtitle1_3}"
+                    Text="{Binding SelectedBook.Author_Book}" />
+
+                <StackLayout
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3"
+                    HorizontalOptions="CenterAndExpand"
+                    Orientation="Horizontal"
+                    Spacing="9">
+
+                    <Image
+                        xct:IconTintColorEffect.TintColor="{StaticResource col_prim}"
+                        Source="{StaticResource icon_star}"
+                        TranslationY="-2" />
+
+                    <Label
+                        Style="{StaticResource TxtBody1_2}"
+                        Text="{Binding SelectedBook.Popularity_Level_Book}"
+                        VerticalTextAlignment="End" />
+
+                    <Label
+                        Style="{StaticResource TxtSubtitle1_4}"
+                        Text="{Binding SelectedBook.Popularity_Counter_Book, StringFormat='({0})'}"
+                        VerticalTextAlignment="End" />
+                </StackLayout>
+
+                <Slider
+                    x:Name="sliderMain"
+                    Grid.Row="7"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3"
+                    Maximum="180"
+                    MaximumTrackColor="{StaticResource col_sec}"
+                    Minimum="0"
+                    MinimumTrackColor="{StaticResource col_ter}"
+                    ThumbColor="{StaticResource col_ter}" />
+
+                <Label
+                    Grid.Row="9"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3"
+                    HorizontalTextAlignment="Start"
+                    Style="{StaticResource TxtBody2_3}"
+                    Text="00.00" />
+
+                <Label
+                    Grid.Row="9"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3"
+                    HorizontalTextAlignment="End"
+                    Style="{StaticResource TxtBody2_3}"
+                    Text="{Binding Value, Source={x:Reference sliderMain}}" />
+
+                <sh:Shadows
+                    Grid.Row="11"
+                    Grid.Column="2"
+                    CornerRadius="25">
+                    <sh:Shadows.Shades>
+                        <sh:ImmutableShades>
+                            <sh:Shade
+                                BlurRadius="60"
+                                Opacity="1"
+                                Offset="0,0"
+                                Color="{StaticResource col_ter}" />
+                        </sh:ImmutableShades>
+                    </sh:Shadows.Shades>
+
+                    <ImageButton
+                        Padding="18"
+                        BackgroundColor="{StaticResource col_ter}"
+                        CornerRadius="25"
+                        HeightRequest="50"
+                        HorizontalOptions="Center"
+                        Source="{StaticResource icon_play}"
+                        VerticalOptions="Center"
+                        WidthRequest="50" />
+                </sh:Shadows>
+            </Grid>
+            <!--#endregion-->
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

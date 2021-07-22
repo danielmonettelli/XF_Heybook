@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="630" viewBox="0 0 420 630">
+  <g id="svg_brave_new_world" transform="translate(4080 -2685)">
+    <g id="Grupo_402" data-name="Grupo 402">
+      <rect id="Rectángulo_303" data-name="Rectángulo 303" width="420" height="630" transform="translate(-4080 2685)" fill="#ed4338"/>
+      <g id="Complete" transform="translate(55 1)">
+        <g id="Picture">
+          <g id="CircleMix" transform="translate(-274 -7)">
+            <circle id="Circle" cx="47.5" cy="47.5" r="47.5" transform="translate(-3699 2883)" fill="#febbad"/>
+            <g id="Grupo_363" data-name="Grupo 363" transform="translate(-1 1)">
+              <g id="Grupo_361" data-name="Grupo 361">
+                <path id="Trazado_122" data-name="Trazado 122" d="M-3666.834,2912.737l32.6,32.425a14.824,14.824,0,0,0,14.706,0,13.258,13.258,0,0,0,6.91-12.4s-1.063-21.794-15.415-33.134-31.184-5.847-31.184-5.847a14.9,14.9,0,0,0-8.682,7.8A10.237,10.237,0,0,0-3666.834,2912.737Z" fill="#ff5c4f"/>
+                <circle id="Elipse_11" data-name="Elipse 11" cx="7" cy="7" r="7" transform="translate(-3645 2910)" fill="#b10e22"/>
+              </g>
+              <g id="Grupo_362" data-name="Grupo 362" transform="translate(-3690.083 2913.448)">
+                <path id="Trazado_122-2" data-name="Trazado 122" d="M-3614.834,2926.841l-32.6-32.425a14.824,14.824,0,0,0-14.706,0,13.258,13.258,0,0,0-6.91,12.4s1.063,21.794,15.415,33.134,31.184,5.847,31.184,5.847a14.9,14.9,0,0,0,8.682-7.8A10.237,10.237,0,0,0-3614.834,2926.841Z" transform="translate(3669.083 -2892.448)" fill="#ff5c4f"/>
+                <path id="Trazado_123" data-name="Trazado 123" d="M7,0A7,7,0,1,1,0,7,7,7,0,0,1,7,0Z" transform="translate(18.415 23.13)" fill="#b10e22"/>
+              </g>
+            </g>
+          </g>
+          <path id="Element3" d="M0,0H160a0,0,0,0,1,0,0V74a80,80,0,0,1-80,80h0A80,80,0,0,1,0,74V0A0,0,0,0,1,0,0Z" transform="translate(-4006 2923)" fill="#17ffdb" opacity="0.8"/>
+          <g id="Element2" transform="translate(-4006 2770)" fill="none">
+            <path d="M80,0a80,80,0,0,1,80,80V227A80,80,0,0,1,0,227V80A80,80,0,0,1,80,0Z" stroke="none"/>
+            <path d="M 80 10 C 41.40184783935547 10 10 41.40185546875 10 80 L 10 227 C 10 265.59814453125 41.40184783935547 297 80 297 C 118.59814453125 297 150 265.59814453125 150 227 L 150 80 C 150 41.40185546875 118.59814453125 10 80 10 M 80 0 C 124.1828002929688 0 160 35.81719970703125 160 80 L 160 227 C 160 271.1827392578125 124.1828002929688 307 80 307 C 35.81719970703125 307 0 271.1827392578125 0 227 L 0 80 C 0 35.81719970703125 35.81719970703125 0 80 0 Z" stroke="none" fill="#febbad"/>
+          </g>
+        </g>
+        <g id="Texts" transform="translate(-274 38)">
+          <text id="BRAVE_NEW_WORLD" data-name="BRAVE NEW WORLD" transform="translate(-3651 3209)" fill="#cc0d00" font-size="34" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-183.141" y="0">BRAVE NEW WORLD</tspan></text>
+          <text id="ALDOUS_HUXLEY" data-name="ALDOUS HUXLEY" transform="translate(-3650 3234)" fill="#cc0d00" font-size="9" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="-39.685" y="0">ALDOUS HUXLEY</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
