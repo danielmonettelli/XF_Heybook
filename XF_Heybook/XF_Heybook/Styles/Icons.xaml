@@ -6,62 +6,62 @@
 
     <!--#region FontImageSource TABS-->
     <FontImageSource
-        x:Key="icon_tab_books"
+        x:Key="icon_tab_book_solid"
         FontFamily="CustomFontIcons"
-        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_books}"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_book_solid}"
         Size="21" />
 
     <FontImageSource
-        x:Key="icon_tab_saved"
+        x:Key="icon_tab_bookmark_solid"
         FontFamily="CustomFontIcons"
-        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_saved}"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_bookmark_solid}"
         Size="21" />
 
     <FontImageSource
-        x:Key="icon_tab_audio"
+        x:Key="icon_tab_audio_solid"
         FontFamily="CustomFontIcons"
-        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_audio}"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_audio_solid}"
         Size="21" />
 
     <FontImageSource
-        x:Key="icon_tab_profile"
+        x:Key="icon_tab_profile_solid"
         FontFamily="CustomFontIcons"
-        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_profile}"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_profile_solid}"
         Size="21" />
     <!--#endregion-->
 
     <!--#region FontImageSource INTERFACES-->
     <FontImageSource
-        x:Key="icon_moore"
+        x:Key="icon_search_outline"
         FontFamily="CustomFontIcons"
-        Glyph="{x:Static FontIcons:CustomFontIcons.icon_moore}"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_search_outline}"
         Size="4"
         Color="{StaticResource col_sec}" />
 
     <FontImageSource
-        x:Key="icon_star"
+        x:Key="icon_star_solid"
         FontFamily="CustomFontIcons"
-        Glyph="{x:Static FontIcons:CustomFontIcons.icon_star}"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_star_solid}"
         Size="12.8" />
 
     <FontImageSource
-        x:Key="icon_left_arrow_line"
+        x:Key="icon_down_arrow_outline"
         FontFamily="CustomFontIcons"
-        Glyph="{x:Static FontIcons:CustomFontIcons.icon_left_arrow_line}"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_down_arrow_outline}"
         Size="26"
         Color="{StaticResource col_sec}" />
 
     <FontImageSource
-        x:Key="icon_play"
+        x:Key="icon_play_solid"
         FontFamily="CustomFontIcons"
-        Glyph="{x:Static FontIcons:CustomFontIcons.icon_play}"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_play_solid}"
         Size="15.77"
         Color="{StaticResource col_qui}" />
 
     <FontImageSource
-        x:Key="icon_pause"
+        x:Key="icon_pause_solid"
         FontFamily="CustomFontIcons"
-        Glyph="{x:Static FontIcons:CustomFontIcons.icon_pause}"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_pause_solid}"
         Size="15.77"
         Color="{StaticResource col_ter}" />
     <!--#endregion-->

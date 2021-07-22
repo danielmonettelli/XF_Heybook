@@ -7,6 +7,7 @@
     xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:sha="http://sharpnado.com"
+    xmlns:templateSelector="clr-namespace:XF_Heybook.Views.DataTemplates"
     xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     x:Name="parentPage"
@@ -16,6 +17,194 @@
     <ContentPage.Resources>
         <ResourceDictionary Source="Styles.xaml" />
 
+        <ResourceDictionary>
+            <DataTemplate x:Key="WithOfferInBookItemTemplate">
+                <Grid
+                    Padding="10,0,10,20"
+                    ColumnDefinitions="*,Auto"
+                    HeightRequest="200"
+                    RowDefinitions="Auto,*"
+                    WidthRequest="100">
+
+                    <Grid
+                        Grid.RowSpan="2"
+                        Grid.ColumnSpan="2"
+                        ColumnDefinitions="4*,49*,40*,7*"
+                        RowDefinitions="12*,43*,37*,8*">
+
+                        <ffimageloadingsvg:SvgCachedImage
+                            Grid.RowSpan="4"
+                            Grid.ColumnSpan="4"
+                            Aspect="AspectFill"
+                            CacheType="All"
+                            Source="{Binding Image_Book}" />
+
+                        <BoxView
+                            Grid.RowSpan="4"
+                            Grid.Column="0"
+                            BackgroundColor="{StaticResource col_sept}"
+                            Opacity="0.57" />
+
+                        <BoxView
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"
+                            BackgroundColor="{StaticResource col_sept}"
+                            Opacity="0.57" />
+
+                        <StackLayout
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2"
+                            Padding="6,15,6,5"
+                            Spacing="4">
+                            <Label
+                                Style="{StaticResource TxtOverline1_1}"
+                                Text="{Binding Name_Book}" />
+                            <Label
+                                Style="{StaticResource TxtOverline2_1}"
+                                Text="{Binding Author_Book}" />
+
+                            <StackLayout
+                                Margin="0,5,0,0"
+                                HorizontalOptions="EndAndExpand"
+                                Orientation="Horizontal"
+                                Spacing="2"
+                                VerticalOptions="EndAndExpand">
+                                <Image
+                                    xct:IconTintColorEffect.TintColor="{StaticResource col_oct}"
+                                    Source="{StaticResource icon_star_solid}"
+                                    TranslationY="-3" />
+                                <Label
+                                    Margin="3.3,0,0,0"
+                                    Style="{StaticResource TxtBody2_1}"
+                                    Text="{Binding Popularity_Level_Book}" />
+                                <Label
+                                    Style="{StaticResource TxtBody2_2}"
+                                    Text="{Binding Popularity_Counter_Book, StringFormat='({0})'}" />
+
+                            </StackLayout>
+                        </StackLayout>
+                    </Grid>
+
+                    <StackLayout
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Padding="7,0"
+                        BackgroundColor="{StaticResource col_qua}">
+                        <Label
+                            HorizontalTextAlignment="End"
+                            Style="{StaticResource TxtSubtitle1_2}"
+                            Text="{Binding Price_Book, StringFormat='{0:C2}'}"
+                            VerticalOptions="CenterAndExpand" />
+                    </StackLayout>
+
+                    <Button
+                        Grid.RowSpan="2"
+                        Grid.ColumnSpan="2"
+                        xct:TouchEffect.Command="{Binding BindingContext.BookSelectedCommand, Source={x:Reference parentPage}}"
+                        xct:TouchEffect.CommandParameter="{Binding .}"
+                        xct:TouchEffect.PressedBackgroundColor="#36131313"
+                        BackgroundColor="Transparent" />
+                </Grid>
+            </DataTemplate>
+
+            <DataTemplate x:Key="NoOfferInBookItemTemplate">
+                <Grid
+                    Padding="10,0,10,20"
+                    ColumnDefinitions="*,Auto"
+                    HeightRequest="200"
+                    RowDefinitions="Auto,*"
+                    WidthRequest="100">
+
+                    <Grid
+                        Grid.RowSpan="2"
+                        Grid.ColumnSpan="2"
+                        ColumnDefinitions="4*,49*,40*,7*"
+                        RowDefinitions="12*,43*,37*,8*">
+
+                        <ffimageloadingsvg:SvgCachedImage
+                            Grid.RowSpan="4"
+                            Grid.ColumnSpan="4"
+                            Aspect="AspectFill"
+                            CacheType="All"
+                            Source="{Binding Image_Book}" />
+
+                        <BoxView
+                            Grid.RowSpan="4"
+                            Grid.Column="0"
+                            BackgroundColor="{StaticResource col_sept}"
+                            Opacity="0.57" />
+
+                        <BoxView
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"
+                            BackgroundColor="{StaticResource col_sept}"
+                            Opacity="0.57" />
+
+                        <StackLayout
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2"
+                            Padding="6,15,6,5"
+                            Spacing="4">
+                            <Label
+                                Style="{StaticResource TxtOverline1_1}"
+                                Text="{Binding Name_Book}" />
+                            <Label
+                                Style="{StaticResource TxtOverline2_1}"
+                                Text="{Binding Author_Book}" />
+
+                            <StackLayout
+                                Margin="0,5,0,0"
+                                HorizontalOptions="EndAndExpand"
+                                Orientation="Horizontal"
+                                Spacing="2"
+                                VerticalOptions="EndAndExpand">
+                                <Image
+                                    xct:IconTintColorEffect.TintColor="{StaticResource col_oct}"
+                                    Source="{StaticResource icon_star_solid}"
+                                    TranslationY="-3" />
+                                <Label
+                                    Margin="3.3,0,0,0"
+                                    Style="{StaticResource TxtBody2_1}"
+                                    Text="{Binding Popularity_Level_Book}" />
+                                <Label
+                                    Style="{StaticResource TxtBody2_2}"
+                                    Text="{Binding Popularity_Counter_Book, StringFormat='({0})'}" />
+
+                            </StackLayout>
+                        </StackLayout>
+                    </Grid>
+
+                    <StackLayout
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Padding="7,0"
+                        BackgroundColor="{StaticResource col_qua}">
+                        <Label
+                            HorizontalTextAlignment="End"
+                            Style="{StaticResource TxtSubtitle1_2}"
+                            Text="{Binding Price_Book, StringFormat='{0:C2}'}"
+                            VerticalOptions="CenterAndExpand" />
+                    </StackLayout>
+
+                    <Button
+                        Grid.RowSpan="2"
+                        Grid.ColumnSpan="2"
+                        xct:TouchEffect.Command="{Binding BindingContext.BookSelectedCommand, Source={x:Reference parentPage}}"
+                        xct:TouchEffect.CommandParameter="{Binding .}"
+                        xct:TouchEffect.PressedBackgroundColor="#36131313"
+                        BackgroundColor="Red" />
+                </Grid>
+            </DataTemplate>
+
+            <templateSelector:BookItemTemplateSelector
+                x:Key="OfferForBookItemTemplateSelector"
+                NoOfferInBookItemTemplate="{StaticResource NoOfferInBookItemTemplate}"
+                WithOfferInBookItemTemplate="{StaticResource WithOfferInBookItemTemplate}" />
+        </ResourceDictionary>
     </ContentPage.Resources>
 
     <!--#region TitleView-->
@@ -43,7 +232,7 @@
 
                 <Image
                     HorizontalOptions="Center"
-                    Source="{StaticResource icon_moore}"
+                    Source="{StaticResource icon_search_outline}"
                     VerticalOptions="CenterAndExpand" />
             </StackLayout>
 
@@ -62,205 +251,10 @@
 
                 <!--#region List of Books for Category-->
                 <xct:UniformGrid
-                    x:Name="collectionView_AudioBookForCategory"
                     Grid.Row="1"
                     Margin="0,10,0,62"
-                    BindableLayout.ItemsSource="{Binding Books}">
-                    <BindableLayout.ItemTemplate>
-                        <DataTemplate>
-                            <Grid
-                                Padding="10,0,10,20"
-                                ColumnDefinitions="*,Auto"
-                                HeightRequest="200"
-                                RowDefinitions="Auto,*"
-                                WidthRequest="100">
-
-                                <Grid
-                                    Grid.RowSpan="2"
-                                    Grid.ColumnSpan="2"
-                                    ColumnDefinitions="4*,49*,40*,7*"
-                                    RowDefinitions="12*,43*,37*,8*">
-
-                                    <ffimageloadingsvg:SvgCachedImage
-                                        Grid.RowSpan="4"
-                                        Grid.ColumnSpan="4"
-                                        Aspect="AspectFill"
-                                        CacheType="All"
-                                        Source="{Binding Image_Book}" />
-
-                                    <BoxView
-                                        Grid.RowSpan="4"
-                                        Grid.Column="0"
-                                        BackgroundColor="{StaticResource col_sept}"
-                                        Opacity="0.57" />
-
-                                    <BoxView
-                                        Grid.Row="2"
-                                        Grid.Column="0"
-                                        Grid.ColumnSpan="3"
-                                        BackgroundColor="{StaticResource col_sept}"
-                                        Opacity="0.57" />
-
-                                    <StackLayout
-                                        Grid.Row="2"
-                                        Grid.Column="1"
-                                        Grid.ColumnSpan="2"
-                                        Padding="6,15,6,5"
-                                        Spacing="4">
-                                        <Label
-                                            Style="{StaticResource TxtOverline1_1}"
-                                            Text="{Binding Name_Book}" />
-                                        <Label
-                                            Style="{StaticResource TxtOverline2_1}"
-                                            Text="{Binding Author_Book}" />
-
-                                        <StackLayout
-                                            Margin="0,5,0,0"
-                                            HorizontalOptions="EndAndExpand"
-                                            Orientation="Horizontal"
-                                            Spacing="2"
-                                            VerticalOptions="EndAndExpand">
-                                            <Image
-                                                xct:IconTintColorEffect.TintColor="{StaticResource col_oct}"
-                                                Source="{StaticResource icon_star}"
-                                                TranslationY="-3" />
-                                            <Label
-                                                Margin="3.3,0,0,0"
-                                                Style="{StaticResource TxtBody2_1}"
-                                                Text="{Binding Popularity_Level_Book}" />
-                                            <Label
-                                                Style="{StaticResource TxtBody2_2}"
-                                                Text="{Binding Popularity_Counter_Book, StringFormat='({0})'}" />
-
-                                        </StackLayout>
-                                    </StackLayout>
-                                </Grid>
-
-                                <StackLayout
-                                    Grid.Row="0"
-                                    Grid.Column="1"
-                                    Padding="7,0"
-                                    BackgroundColor="{StaticResource col_qua}">
-                                    <Label
-                                        HorizontalTextAlignment="End"
-                                        Style="{StaticResource TxtSubtitle1_2}"
-                                        Text="{Binding Price_Book, StringFormat='{0:C2}'}"
-                                        VerticalOptions="CenterAndExpand" />
-                                </StackLayout>
-
-                                <Button
-                                    Grid.RowSpan="2"
-                                    Grid.ColumnSpan="2"
-                                    xct:TouchEffect.Command="{Binding BindingContext.BookSelectedCommand, Source={x:Reference parentPage}}"
-                                    xct:TouchEffect.CommandParameter="{Binding .}"
-                                    xct:TouchEffect.PressedBackgroundColor="#36131313"
-                                    BackgroundColor="Transparent" />
-                            </Grid>
-                        </DataTemplate>
-                    </BindableLayout.ItemTemplate>
-                </xct:UniformGrid>
-                <!--<CollectionView
-                    x:Name="collectionView_AudioBookForCategory"
-                    Grid.Row="1"
-                    Margin="10,0"
-                    SelectionMode="Single"
-                    SelectionChanged="CollectionView_SelectedItem"
-                    ItemsSource="{Binding Books}">
-                    <CollectionView.ItemsLayout>
-                        <GridItemsLayout
-                            Span="2"
-                            HorizontalItemSpacing="5"
-                            VerticalItemSpacing="5"
-                            Orientation="Vertical" />
-                    </CollectionView.ItemsLayout>
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid
-                                RowDefinitions="Auto,*"
-                                ColumnDefinitions="*,Auto"
-                                HeightRequest="235"
-                                WidthRequest="169">
-
-                                <Grid
-                                    Grid.RowSpan="2"
-                                    Grid.ColumnSpan="2"
-                                    ColumnDefinitions="4*,49*,40*,7*"
-                                    RowDefinitions="12*,43*,37*,8*">
-
-                                    <ffimageloadingsvg:SvgCachedImage
-                                        Grid.RowSpan="4"
-                                        Grid.ColumnSpan="4"
-                                        CacheType="All"
-                                        Aspect="AspectFill"
-                                        Source="{Binding Image_Book}" />
-
-
-
-                                    <BoxView
-                                        Grid.RowSpan="4"
-                                        Grid.Column="0"
-                                        Opacity="0.57"
-                                        BackgroundColor="{StaticResource col_sept}" />
-
-                                    <BoxView
-                                        Grid.Row="2"
-                                        Grid.Column="0"
-                                        Grid.ColumnSpan="3"
-                                        Opacity="0.57"
-                                        BackgroundColor="{StaticResource col_sept}" />
-
-                                    <StackLayout
-                                        Grid.Row="2"
-                                        Grid.Column="1"
-                                        Grid.ColumnSpan="2"
-                                        Padding="6,15,6,5"
-                                        Spacing="4">
-                                        <Label
-                                            Text="{Binding Name_Book}"
-                                            MaxLines="2"
-                                            Style="{StaticResource TxtOverline1_1}" />
-                                        <Label
-                                            Text="{Binding Author_Book}"
-                                            Style="{StaticResource TxtOverline2_1}" />
-
-                                        <StackLayout
-                                            Margin="0,5,0,0"
-                                            HorizontalOptions="EndAndExpand"
-                                            VerticalOptions="EndAndExpand"
-                                            Orientation="Horizontal"
-                                            Spacing="2">
-                                            <Image
-                                                xct:IconTintColorEffect.TintColor="{StaticResource col_oct}"
-                                                Source="{StaticResource icon_star}"
-                                                TranslationY="-3" />
-                                            <Label
-                                                Margin="3.3,0,0,0"
-                                                Text="{Binding Popularity_Level_Book}"
-                                                Style="{StaticResource TxtBody2_1}" />
-                                            <Label
-                                                Text="{Binding Popularity_Counter_Book, StringFormat='({0})'}"
-                                                Style="{StaticResource TxtBody2_2}" />
-
-                                        </StackLayout>
-                                    </StackLayout>
-                                </Grid>
-
-                                <StackLayout
-                                    Grid.Row="0"
-                                    Grid.Column="1"
-                                    Padding="7,0"
-                                    BackgroundColor="{StaticResource col_qua}">
-                                    <Label
-                                        Text="{Binding Price_Book, StringFormat='{0:C2}'}"
-                                        Style="{StaticResource TxtSubtitle1_2}"
-                                        VerticalOptions="CenterAndExpand"
-                                        HorizontalTextAlignment="End" />
-                                </StackLayout>
-                            </Grid>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>-->
-                <!--#endregion-->
+                    BindableLayout.ItemTemplateSelector="{StaticResource OfferForBookItemTemplateSelector}"
+                    BindableLayout.ItemsSource="{Binding Books}" />
             </Grid>
         </ScrollView>
 
@@ -324,28 +318,28 @@
                 <sha:TabHostView.Tabs>
 
                     <sha:BottomTabItem
-                        IconImageSource="{StaticResource icon_tab_books}"
+                        IconImageSource="{StaticResource icon_tab_book_solid}"
                         IconSize="21"
                         IsTextVisible="False"
                         SelectedTabColor="{DynamicResource col_sec}"
                         UnselectedIconColor="{DynamicResource col_non}" />
 
                     <sha:BottomTabItem
-                        IconImageSource="{StaticResource icon_tab_saved}"
+                        IconImageSource="{StaticResource icon_tab_bookmark_solid}"
                         IconSize="21"
                         IsTextVisible="False"
                         SelectedTabColor="{DynamicResource col_sec}"
                         UnselectedIconColor="{DynamicResource col_non}" />
 
                     <sha:BottomTabItem
-                        IconImageSource="{StaticResource icon_tab_audio}"
+                        IconImageSource="{StaticResource icon_tab_audio_solid}"
                         IconSize="21"
                         IsTextVisible="False"
                         SelectedTabColor="{DynamicResource col_sec}"
                         UnselectedIconColor="{DynamicResource col_non}" />
 
                     <sha:BottomTabItem
-                        IconImageSource="{StaticResource icon_tab_profile}"
+                        IconImageSource="{StaticResource icon_tab_profile_solid}"
                         IconSize="21"
                         IsTextVisible="False"
                         SelectedTabColor="{DynamicResource col_sec}"

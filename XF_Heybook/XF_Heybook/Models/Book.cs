@@ -9,6 +9,7 @@
         private double _popularity_Level_Book;
         private double _popularity_Counter_Book;
         private string _image_Book;
+        private bool _inOffer;
 
         public int Id_Book
         {
@@ -50,6 +51,12 @@
         {
             get => _image_Book;
             set => _image_Book = value;
+        }
+
+        public bool InOffer
+        {
+            get => _inOffer;
+            set => _inOffer = value;
         }
     }
 }

@@ -24,7 +24,7 @@ namespace XF_HeyBook.ViewModels
             this._navigationService = navigationService;
             this._bookDataService = bookDataService;
             this._categoryDataService = categoryDataService;
-
+            
             Books = new ObservableRangeCollection<Book>(_bookDataService.GetAllBooks());
             Categories = new ObservableRangeCollection<Category>(_categoryDataService.GetAllCategories());
 

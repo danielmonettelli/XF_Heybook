@@ -86,7 +86,7 @@
 
                     <Image
                         xct:IconTintColorEffect.TintColor="{StaticResource col_prim}"
-                        Source="{StaticResource icon_star}"
+                        Source="{StaticResource icon_star_solid}"
                         TranslationY="-2" />
 
                     <Label
@@ -147,7 +147,7 @@
                         CornerRadius="25"
                         HeightRequest="50"
                         HorizontalOptions="Center"
-                        Source="{StaticResource icon_play}"
+                        Source="{StaticResource icon_play_solid}"
                         VerticalOptions="Center"
                         WidthRequest="50" />
                 </sh:Shadows>
