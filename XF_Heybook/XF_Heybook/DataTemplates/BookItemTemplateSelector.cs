@@ -1,7 +1,7 @@
 ﻿using Xamarin.Forms;
 using XF_HeyBook.Models;
 
-namespace XF_Heybook.Views.DataTemplates
+namespace XF_Heybook.DataTemplates
 {
     public class BookItemTemplateSelector : DataTemplateSelector
     {

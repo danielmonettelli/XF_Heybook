@@ -32,10 +32,24 @@
 
     <!--#region FontImageSource INTERFACES-->
     <FontImageSource
+        x:Key="icon_hey_book_brand_solid"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_hey_book_brand_solid}"
+        Size="32"
+        Color="{StaticResource col_ter}" />
+
+    <FontImageSource
         x:Key="icon_search_outline"
         FontFamily="CustomFontIcons"
         Glyph="{x:Static FontIcons:CustomFontIcons.icon_search_outline}"
-        Size="4"
+        Size="18"
+        Color="{StaticResource col_sec}" />
+
+    <FontImageSource
+        x:Key="icon_notification_solid"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_notification_solid}"
+        Size="20"
         Color="{StaticResource col_sec}" />
 
     <FontImageSource

@@ -18,6 +18,7 @@
     <None Remove="Resources\FontFamily\Montserrat-Regular.ttf" />
     <None Remove="Resources\FontFamily\Montserrat-SemiBold.ttf" />
     <None Remove="Resources\FontIcons\customfonticons.ttf" />
+    <None Remove="Resources\SVGs\svg_special_offer.svg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +28,7 @@
     <EmbeddedResource Include="Resources\FontFamily\Montserrat-Regular.ttf" />
     <EmbeddedResource Include="Resources\FontFamily\Montserrat-SemiBold.ttf" />
     <EmbeddedResource Include="Resources\FontIcons\customfonticons.ttf" />
+    <EmbeddedResource Include="Resources\SVGs\svg_special_offer.svg" />
   </ItemGroup>
 
   <ItemGroup>

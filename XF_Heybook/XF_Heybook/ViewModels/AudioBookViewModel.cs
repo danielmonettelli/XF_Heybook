@@ -24,7 +24,7 @@ namespace XF_HeyBook.ViewModels
             this._navigationService = navigationService;
             this._bookDataService = bookDataService;
             this._categoryDataService = categoryDataService;
-            
+
             Books = new ObservableRangeCollection<Book>(_bookDataService.GetAllBooks());
             Categories = new ObservableRangeCollection<Category>(_categoryDataService.GetAllCategories());
 
@@ -38,9 +38,9 @@ namespace XF_HeyBook.ViewModels
 
         public ICommand BookSelectedCommand { get; private set; }
 
-        private void OnBookSelectedCommand(Book book)
+        private async void OnBookSelectedCommand(Book book)
         {
-            Task.Delay(350);
+            await Task.Delay(200);
             _navigationService.NavigateTo("AudioBookDetailPage", book);
         }
     }

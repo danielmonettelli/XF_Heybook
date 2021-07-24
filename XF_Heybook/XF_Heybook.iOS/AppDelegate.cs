@@ -37,6 +37,8 @@ namespace XF_Heybook.iOS
             Sharpnado.Shades.iOS.iOSShadowsRenderer.Initialize();
             // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+            LoadApplication(new App());
+
             return base.FinishedLaunching(app, options);
         }
     }

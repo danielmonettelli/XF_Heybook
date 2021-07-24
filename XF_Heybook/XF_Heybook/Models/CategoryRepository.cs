@@ -13,6 +13,10 @@ namespace XF_HeyBook.Models
             {
                 new Category
                 {
+                    Name_Category="All"
+                },
+                new Category
+                {
                     Name_Category="New Arrivals"
                 },
                 new Category

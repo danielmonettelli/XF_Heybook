@@ -7,7 +7,7 @@
     xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:sha="http://sharpnado.com"
-    xmlns:templateSelector="clr-namespace:XF_Heybook.Views.DataTemplates"
+    xmlns:templateSelector="clr-namespace:XF_Heybook.DataTemplates"
     xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     x:Name="parentPage"
@@ -18,6 +18,7 @@
         <ResourceDictionary Source="Styles.xaml" />
 
         <ResourceDictionary>
+            <!--#region DataTemplate WithOffer-->
             <DataTemplate x:Key="WithOfferInBookItemTemplate">
                 <Grid
                     Padding="10,0,10,20"
@@ -29,33 +30,40 @@
                     <Grid
                         Grid.RowSpan="2"
                         Grid.ColumnSpan="2"
-                        ColumnDefinitions="4*,49*,40*,7*"
-                        RowDefinitions="12*,43*,37*,8*">
+                        ColumnDefinitions="4*,35*,14*,40*,7*"
+                        RowDefinitions="12*,9*,34*,37*,8*">
 
                         <ffimageloadingsvg:SvgCachedImage
-                            Grid.RowSpan="4"
-                            Grid.ColumnSpan="4"
+                            Grid.RowSpan="5"
+                            Grid.ColumnSpan="5"
                             Aspect="AspectFill"
                             CacheType="All"
                             Source="{Binding Image_Book}" />
 
                         <BoxView
-                            Grid.RowSpan="4"
+                            Grid.RowSpan="5"
                             Grid.Column="0"
                             BackgroundColor="{StaticResource col_sept}"
                             Opacity="0.57" />
 
+                        <ffimageloadingsvg:SvgCachedImage
+                            Grid.Row="0"
+                            Grid.RowSpan="2"
+                            Grid.Column="1"
+                            HorizontalOptions="Start"
+                            Source="resource://XF_Heybook.Resources.SVGs.svg_special_offer.svg" />
+
                         <BoxView
-                            Grid.Row="2"
+                            Grid.Row="3"
                             Grid.Column="0"
-                            Grid.ColumnSpan="3"
+                            Grid.ColumnSpan="4"
                             BackgroundColor="{StaticResource col_sept}"
                             Opacity="0.57" />
 
                         <StackLayout
-                            Grid.Row="2"
+                            Grid.Row="3"
                             Grid.Column="1"
-                            Grid.ColumnSpan="2"
+                            Grid.ColumnSpan="3"
                             Padding="6,15,6,5"
                             Spacing="4">
                             <Label
@@ -102,13 +110,26 @@
                     <Button
                         Grid.RowSpan="2"
                         Grid.ColumnSpan="2"
-                        xct:TouchEffect.Command="{Binding BindingContext.BookSelectedCommand, Source={x:Reference parentPage}}"
-                        xct:TouchEffect.CommandParameter="{Binding .}"
                         xct:TouchEffect.PressedBackgroundColor="#36131313"
-                        BackgroundColor="Transparent" />
+                        BackgroundColor="Transparent">
+                        <Button.Behaviors>
+                            <xct:AnimationBehavior
+                                Command="{Binding BindingContext.BookSelectedCommand, Source={x:Reference parentPage}}"
+                                CommandParameter="{Binding .}"
+                                EventName="Clicked">
+                                <xct:AnimationBehavior.AnimationType>
+                                    <xct:FadeAnimation
+                                        Easing="{x:Static Easing.Linear}"
+                                        Duration="100" />
+                                </xct:AnimationBehavior.AnimationType>
+                            </xct:AnimationBehavior>
+                        </Button.Behaviors>
+                    </Button>
                 </Grid>
             </DataTemplate>
+            <!--#endregion-->
 
+            <!--#region DataTemplate NoOffer-->
             <DataTemplate x:Key="NoOfferInBookItemTemplate">
                 <Grid
                     Padding="10,0,10,20"
@@ -193,26 +214,47 @@
                     <Button
                         Grid.RowSpan="2"
                         Grid.ColumnSpan="2"
-                        xct:TouchEffect.Command="{Binding BindingContext.BookSelectedCommand, Source={x:Reference parentPage}}"
-                        xct:TouchEffect.CommandParameter="{Binding .}"
                         xct:TouchEffect.PressedBackgroundColor="#36131313"
-                        BackgroundColor="Red" />
+                        BackgroundColor="Transparent">
+                        <Button.Behaviors>
+                            <xct:AnimationBehavior
+                                Command="{Binding BindingContext.BookSelectedCommand, Source={x:Reference parentPage}}"
+                                CommandParameter="{Binding .}"
+                                EventName="Clicked">
+                                <xct:AnimationBehavior.AnimationType>
+                                    <xct:FadeAnimation
+                                        Easing="{x:Static Easing.Linear}"
+                                        Duration="100" />
+                                </xct:AnimationBehavior.AnimationType>
+                            </xct:AnimationBehavior>
+                        </Button.Behaviors>
+                    </Button>
                 </Grid>
             </DataTemplate>
+            <!--#endregion-->
 
+            <!--#region DataTemplateSelector Offer-->
             <templateSelector:BookItemTemplateSelector
                 x:Key="OfferForBookItemTemplateSelector"
                 NoOfferInBookItemTemplate="{StaticResource NoOfferInBookItemTemplate}"
                 WithOfferInBookItemTemplate="{StaticResource WithOfferInBookItemTemplate}" />
+            <!--#endregion-->
         </ResourceDictionary>
     </ContentPage.Resources>
 
     <!--#region TitleView-->
     <NavigationPage.TitleView>
         <StackLayout
-            Padding="0,0,23,0"
-            Orientation="Horizontal">
-            <Label>
+            Padding="0,0,8,0"
+            Orientation="Horizontal"
+            Spacing="6">
+
+            <Image
+                HorizontalOptions="Center"
+                Source="{StaticResource icon_hey_book_brand_solid}"
+                VerticalOptions="CenterAndExpand" />
+
+            <Label VerticalTextAlignment="Center">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span
@@ -228,7 +270,25 @@
             <StackLayout
                 xct:TouchEffect.AnimationDuration="300"
                 xct:TouchEffect.NativeAnimation="True"
-                HorizontalOptions="EndAndExpand">
+                xct:TouchEffect.PressedBackgroundColor="#121212"
+                HeightRequest="48"
+                HorizontalOptions="EndAndExpand"
+                TranslationX="-6"
+                WidthRequest="48">
+
+                <Image
+                    HorizontalOptions="Center"
+                    Source="{StaticResource icon_notification_solid}"
+                    VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+
+            <StackLayout
+                xct:TouchEffect.AnimationDuration="300"
+                xct:TouchEffect.NativeAnimation="True"
+                xct:TouchEffect.PressedBackgroundColor="#121212"
+                HeightRequest="48"
+                HorizontalOptions="End"
+                WidthRequest="48">
 
                 <Image
                     HorizontalOptions="Center"
@@ -255,6 +315,7 @@
                     Margin="0,10,0,62"
                     BindableLayout.ItemTemplateSelector="{StaticResource OfferForBookItemTemplateSelector}"
                     BindableLayout.ItemsSource="{Binding Books}" />
+                <!--#endregion-->
             </Grid>
         </ScrollView>
 
@@ -279,13 +340,10 @@
                             </StackLayout.GestureRecognizers>
                             <Label
                                 x:Name="LabelCategory"
+                                HorizontalTextAlignment="Center"
                                 Style="{StaticResource vsm_surfaceCategory}"
                                 Text="{Binding Name_Category}"
-                                VerticalOptions="CenterAndExpand">
-                                <!--<Label.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Label_Tapped" />
-                                </Label.GestureRecognizers>-->
-                            </Label>
+                                VerticalOptions="CenterAndExpand" />
                             <BoxView
                                 x:Name="LineBox"
                                 BackgroundColor="{StaticResource col_sec}"
