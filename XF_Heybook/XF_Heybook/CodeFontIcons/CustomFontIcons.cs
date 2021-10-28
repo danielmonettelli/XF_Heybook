@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace XF_HeyBook.CodeFontIcons
+namespace XF_Heybook.CodeFontIcons
 {
     internal static class CustomFontIcons
     {

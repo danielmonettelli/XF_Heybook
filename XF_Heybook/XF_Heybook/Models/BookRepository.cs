@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace XF_HeyBook.Models
+namespace XF_Heybook.Models
 {
     public static class BookRepository
     {

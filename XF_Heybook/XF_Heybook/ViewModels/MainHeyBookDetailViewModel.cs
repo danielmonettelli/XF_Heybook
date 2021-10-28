@@ -1,16 +1,16 @@
-﻿using XF_HeyBook.Models;
-using XF_HeyBook.Services;
+﻿using XF_Heybook.Models;
+using XF_Heybook.Services;
 
-namespace XF_HeyBook.ViewModels
+namespace XF_Heybook.ViewModels
 {
-    public class AudioBookDetailViewModel : MyBaseViewModel
+    public class MainHeyBookDetailViewModel : MyBaseViewModel
     {
         private readonly INavigationService _navigationService;
         private readonly IBookDataService _bookDataService;
 
         public Book SelectedBook { get; set; }
 
-        public AudioBookDetailViewModel(
+        public MainHeyBookDetailViewModel(
             INavigationService navigationService,
             IBookDataService bookDataService)
         {

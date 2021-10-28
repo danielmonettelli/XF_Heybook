@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Xamarin.Forms;
-using XF_HeyBook.ViewModels;
+using XF_Heybook.ViewModels;
 
-namespace XF_HeyBook.Services
+namespace XF_Heybook.Services
 {
     public class NavigationService : INavigationService
     {

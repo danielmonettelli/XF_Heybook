@@ -1,4 +1,4 @@
-﻿namespace XF_HeyBook.Models
+﻿namespace XF_Heybook.Models
 {
     public class Book
     {

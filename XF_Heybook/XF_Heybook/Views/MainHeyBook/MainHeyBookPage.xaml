@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="XF_HeyBook.Views.AudioBookPage"
+    x:Class="XF_Heybook.Views.MainHeyBookPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
@@ -11,11 +11,11 @@
     xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     x:Name="parentPage"
-    ios:Page.UseSafeArea="true"
-    BackgroundColor="{StaticResource col_qui}">
+    ios:Page.UseSafeArea="True"
+    BackgroundColor="{StaticResource col_background}">
 
     <ContentPage.Resources>
-        <ResourceDictionary Source="Styles.xaml" />
+        <ResourceDictionary Source="/Views/Styles.xaml" />
 
         <ResourceDictionary>
             <!--#region DataTemplate WithOffer-->
@@ -43,7 +43,7 @@
                         <BoxView
                             Grid.RowSpan="5"
                             Grid.Column="0"
-                            BackgroundColor="{StaticResource col_sept}"
+                            BackgroundColor="{StaticResource col_oct}"
                             Opacity="0.57" />
 
                         <ffimageloadingsvg:SvgCachedImage
@@ -57,7 +57,7 @@
                             Grid.Row="3"
                             Grid.Column="0"
                             Grid.ColumnSpan="4"
-                            BackgroundColor="{StaticResource col_sept}"
+                            BackgroundColor="{StaticResource col_oct}"
                             Opacity="0.57" />
 
                         <StackLayout
@@ -80,7 +80,7 @@
                                 Spacing="2"
                                 VerticalOptions="EndAndExpand">
                                 <Image
-                                    xct:IconTintColorEffect.TintColor="{StaticResource col_oct}"
+                                    xct:IconTintColorEffect.TintColor="{StaticResource col_sext}"
                                     Source="{StaticResource icon_star_solid}"
                                     TranslationY="-3" />
                                 <Label
@@ -99,10 +99,10 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Padding="7,0"
-                        BackgroundColor="{StaticResource col_qua}">
+                        BackgroundColor="{StaticResource col_sext}">
                         <Label
                             HorizontalTextAlignment="End"
-                            Style="{StaticResource TxtSubtitle1_2}"
+                            Style="{StaticResource TxtBody1_1}"
                             Text="{Binding Price_Book, StringFormat='{0:C2}'}"
                             VerticalOptions="CenterAndExpand" />
                     </StackLayout>
@@ -154,14 +154,14 @@
                         <BoxView
                             Grid.RowSpan="4"
                             Grid.Column="0"
-                            BackgroundColor="{StaticResource col_sept}"
+                            BackgroundColor="{StaticResource col_oct}"
                             Opacity="0.57" />
 
                         <BoxView
                             Grid.Row="2"
                             Grid.Column="0"
                             Grid.ColumnSpan="3"
-                            BackgroundColor="{StaticResource col_sept}"
+                            BackgroundColor="{StaticResource col_oct}"
                             Opacity="0.57" />
 
                         <StackLayout
@@ -184,7 +184,7 @@
                                 Spacing="2"
                                 VerticalOptions="EndAndExpand">
                                 <Image
-                                    xct:IconTintColorEffect.TintColor="{StaticResource col_oct}"
+                                    xct:IconTintColorEffect.TintColor="{StaticResource col_sext}"
                                     Source="{StaticResource icon_star_solid}"
                                     TranslationY="-3" />
                                 <Label
@@ -203,10 +203,10 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Padding="7,0"
-                        BackgroundColor="{StaticResource col_qua}">
+                        BackgroundColor="{StaticResource col_sext}">
                         <Label
                             HorizontalTextAlignment="End"
-                            Style="{StaticResource TxtSubtitle1_2}"
+                            Style="{StaticResource TxtBody1_1}"
                             Text="{Binding Price_Book, StringFormat='{0:C2}'}"
                             VerticalOptions="CenterAndExpand" />
                     </StackLayout>
@@ -245,9 +245,18 @@
     <!--#region TitleView-->
     <NavigationPage.TitleView>
         <StackLayout
-            Padding="0,0,8,0"
             Orientation="Horizontal"
             Spacing="6">
+            <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On
+                        Platform="Android"
+                        Value="0,0,8,0" />
+                    <On
+                        Platform="iOS"
+                        Value="0" />
+                </OnPlatform>
+            </StackLayout.Padding>
 
             <Image
                 HorizontalOptions="Center"
@@ -273,12 +282,12 @@
                 xct:TouchEffect.PressedBackgroundColor="#121212"
                 HeightRequest="48"
                 HorizontalOptions="EndAndExpand"
-                TranslationX="-6"
+                TranslationX="2"
                 WidthRequest="48">
 
                 <Image
                     HorizontalOptions="Center"
-                    Source="{StaticResource icon_notification_solid}"
+                    Source="{StaticResource icon_navigation_notification_solid}"
                     VerticalOptions="CenterAndExpand" />
             </StackLayout>
 
@@ -302,7 +311,7 @@
 
     <Grid
         ColumnDefinitions="21*,58*,21*"
-        RowDefinitions="48,*,51,16">
+        RowDefinitions="51,*,51,16">
 
         <ScrollView
             Grid.RowSpan="4"
@@ -312,7 +321,7 @@
                 <!--#region List of Books for Category-->
                 <xct:UniformGrid
                     Grid.Row="1"
-                    Margin="0,10,0,62"
+                    Margin="0,12,0,62"
                     BindableLayout.ItemTemplateSelector="{StaticResource OfferForBookItemTemplateSelector}"
                     BindableLayout.ItemsSource="{Binding Books}" />
                 <!--#endregion-->
@@ -325,87 +334,98 @@
             Grid.ColumnSpan="3"
             HorizontalScrollBarVisibility="Never"
             Orientation="Horizontal">
-            <StackLayout
-                x:Name="CategoryList"
-                Padding="20,0"
-                BackgroundColor="{StaticResource col_qua}"
-                BindableLayout.ItemsSource="{Binding Categories}"
-                Orientation="Horizontal"
-                Spacing="40">
-                <BindableLayout.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout>
-                            <StackLayout.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="TapGestureRecognizer_StackLayout_Tapped" />
-                            </StackLayout.GestureRecognizers>
-                            <Label
-                                x:Name="LabelCategory"
-                                HorizontalTextAlignment="Center"
-                                Style="{StaticResource vsm_surfaceCategory}"
-                                Text="{Binding Name_Category}"
-                                VerticalOptions="CenterAndExpand" />
-                            <BoxView
-                                x:Name="LineBox"
-                                BackgroundColor="{StaticResource col_sec}"
-                                CornerRadius="10,10,0,0"
-                                HeightRequest="4"
-                                Style="{StaticResource vsm_lineForCategory}" />
-                        </StackLayout>
-                    </DataTemplate>
-                </BindableLayout.ItemTemplate>
-            </StackLayout>
+
+            <sha:Shadows
+                Margin="0"
+                Padding="0,0,0,3">
+                <sha:Shadows.Shades>
+                    <sha:ImmutableShades>
+                        <sha:Shade
+                            BlurRadius="6"
+                            Opacity="1"
+                            Offset="0,3"
+                            Color="{StaticResource col_qua}" />
+                    </sha:ImmutableShades>
+                </sha:Shadows.Shades>
+
+                <StackLayout
+                    x:Name="CategoryList"
+                    Padding="20,0"
+                    BackgroundColor="{StaticResource col_sec}"
+                    BindableLayout.ItemsSource="{Binding Categories}"
+                    Orientation="Horizontal"
+                    Spacing="40">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_StackLayout_Tapped" />
+                                </StackLayout.GestureRecognizers>
+                                <Label
+                                    x:Name="LabelCategory"
+                                    HorizontalTextAlignment="Center"
+                                    Style="{StaticResource vsm_surfaceCategory}"
+                                    Text="{Binding Name_Category}"
+                                    VerticalOptions="CenterAndExpand" />
+                                <BoxView
+                                    x:Name="LineBox"
+                                    BackgroundColor="{StaticResource col_ter}"
+                                    CornerRadius="10,10,0,0"
+                                    HeightRequest="4"
+                                    Style="{StaticResource vsm_lineForCategory}" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </sha:Shadows>
         </ScrollView>
         <!--#endregion-->
 
         <!--#region Elegant TabView-->
-        <sha:MaterialFrame
+        <sha:TabHostView
             Grid.Row="2"
             Grid.Column="1"
-            Padding="0"
+            BackgroundColor="{StaticResource col_shadow_surface}"
             CornerRadius="25"
-            MaterialTheme="AcrylicBlur">
+            IsSegmented="True"
+            Shades="{sha:SingleShade Offset='0,3',
+                                     BlurRadius=6,
+                                     Color={StaticResource col_shadow_surface},
+                                     Opacity=1}"
+            TabType="Fixed">
 
-            <sha:TabHostView
-                IsSegmented="True"
-                Shades="{sha:SingleShade Offset='0,0',
-                                         BlurRadius=0,
-                                         Color={StaticResource col_qua},
-                                         Opacity=0.5}"
-                TabType="Fixed">
+            <sha:TabHostView.Tabs>
 
-                <sha:TabHostView.Tabs>
+                <sha:BottomTabItem
+                    IconImageSource="{StaticResource icon_tab_book_solid}"
+                    IconSize="21"
+                    IsTextVisible="False"
+                    SelectedTabColor="{DynamicResource col_qui}"
+                    UnselectedIconColor="{DynamicResource col_sept}" />
 
-                    <sha:BottomTabItem
-                        IconImageSource="{StaticResource icon_tab_book_solid}"
-                        IconSize="21"
-                        IsTextVisible="False"
-                        SelectedTabColor="{DynamicResource col_sec}"
-                        UnselectedIconColor="{DynamicResource col_non}" />
+                <sha:BottomTabItem
+                    IconImageSource="{StaticResource icon_tab_bookmark_solid}"
+                    IconSize="21"
+                    IsTextVisible="False"
+                    SelectedTabColor="{DynamicResource col_qui}"
+                    UnselectedIconColor="{DynamicResource col_sept}" />
 
-                    <sha:BottomTabItem
-                        IconImageSource="{StaticResource icon_tab_bookmark_solid}"
-                        IconSize="21"
-                        IsTextVisible="False"
-                        SelectedTabColor="{DynamicResource col_sec}"
-                        UnselectedIconColor="{DynamicResource col_non}" />
+                <sha:BottomTabItem
+                    IconImageSource="{StaticResource icon_tab_audio_solid}"
+                    IconSize="21"
+                    IsTextVisible="False"
+                    SelectedTabColor="{DynamicResource col_qui}"
+                    UnselectedIconColor="{DynamicResource col_sept}" />
 
-                    <sha:BottomTabItem
-                        IconImageSource="{StaticResource icon_tab_audio_solid}"
-                        IconSize="21"
-                        IsTextVisible="False"
-                        SelectedTabColor="{DynamicResource col_sec}"
-                        UnselectedIconColor="{DynamicResource col_non}" />
+                <sha:BottomTabItem
+                    IconImageSource="{StaticResource icon_tab_profile_solid}"
+                    IconSize="21"
+                    IsTextVisible="False"
+                    SelectedTabColor="{DynamicResource col_qui}"
+                    UnselectedIconColor="{DynamicResource col_sept}" />
 
-                    <sha:BottomTabItem
-                        IconImageSource="{StaticResource icon_tab_profile_solid}"
-                        IconSize="21"
-                        IsTextVisible="False"
-                        SelectedTabColor="{DynamicResource col_sec}"
-                        UnselectedIconColor="{DynamicResource col_non}" />
-
-                </sha:TabHostView.Tabs>
-            </sha:TabHostView>
-        </sha:MaterialFrame>
+            </sha:TabHostView.Tabs>
+        </sha:TabHostView>
         <!--#endregion-->
     </Grid>
 

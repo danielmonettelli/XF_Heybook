@@ -1,5 +1,5 @@
 ﻿using Xamarin.Forms;
-using XF_HeyBook.Models;
+using XF_Heybook.Models;
 
 namespace XF_Heybook.DataTemplates
 {

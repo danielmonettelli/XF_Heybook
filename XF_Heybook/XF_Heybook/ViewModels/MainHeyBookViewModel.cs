@@ -1,13 +1,13 @@
 ﻿using MvvmHelpers;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using XF_HeyBook.Models;
-using XF_HeyBook.Services;
+using XF_Heybook.Models;
+using XF_Heybook.Services;
 using Xamarin.Forms;
 
-namespace XF_HeyBook.ViewModels
+namespace XF_Heybook.ViewModels
 {
-    public class AudioBookViewModel : MyBaseViewModel
+    public class MainHeyBookViewModel : MyBaseViewModel
     {
         private readonly INavigationService _navigationService;
         private readonly IBookDataService _bookDataService;
@@ -16,7 +16,7 @@ namespace XF_HeyBook.ViewModels
         public ObservableRangeCollection<Book> Books { get; }
         public ObservableRangeCollection<Category> Categories { get; }
 
-        public AudioBookViewModel
+        public MainHeyBookViewModel
             (INavigationService navigationService,
             IBookDataService bookDataService,
             ICategoryDataService categoryDataService)
@@ -41,7 +41,7 @@ namespace XF_HeyBook.ViewModels
         private async void OnBookSelectedCommand(Book book)
         {
             await Task.Delay(200);
-            _navigationService.NavigateTo("AudioBookDetailPage", book);
+            _navigationService.NavigateTo("MainHeyBookDetailPage", book);
         }
     }
 }

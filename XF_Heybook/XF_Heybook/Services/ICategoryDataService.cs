@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using XF_HeyBook.Models;
+using XF_Heybook.Models;
 
-namespace XF_HeyBook.Services
+namespace XF_Heybook.Services
 {
     public interface ICategoryDataService
     {

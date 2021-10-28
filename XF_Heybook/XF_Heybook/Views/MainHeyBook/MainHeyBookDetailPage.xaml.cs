@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using XF_HeyBook.Utility;
+using XF_Heybook.Utility;
 
-namespace XF_HeyBook.Views
+namespace XF_Heybook.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AudioBookDetailPage : ContentPage
+    public partial class MainHeyBookDetailPage : ContentPage
     {
-        public AudioBookDetailPage()
+        public MainHeyBookDetailPage()
         {
             InitializeComponent();
 
-            BindingContext = ViewModelLocator.AudioBookDetailViewModel;
+            BindingContext = ViewModelLocator.MainHeyBookDetailViewModel;
         }
     }
 }

@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XF_Heybook.Views.TabManagerPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:page="clr-namespace:XF_Heybook.Views"
+    xmlns:sha="http://sharpnado.com"
+    xmlns:viewmodels="clr-namespace:XF_Heybook.ViewModels"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    x:Name="parentPage"
+    ios:Page.UseSafeArea="true"
+    x:DataType="viewmodels:TabManagerViewModel"
+    BackgroundColor="{StaticResource col_qui}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary Source="/Views/Styles.xaml" />
+    </ContentPage.Resources>
+
+    <!--#region TitleView-->
+    <NavigationPage.TitleView>
+        <StackLayout
+            Padding="0,0,8,0"
+            Orientation="Horizontal"
+            Spacing="6">
+
+            <Image
+                HorizontalOptions="Center"
+                Source="{StaticResource icon_hey_book_brand_solid}"
+                VerticalOptions="CenterAndExpand" />
+
+            <Label VerticalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            Style="{StaticResource Span_TxtHeadline5_1}"
+                            Text="Hey" />
+                        <Span
+                            Style="{StaticResource Span_TxtHeadline5_2}"
+                            Text="Book" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <StackLayout
+                xct:TouchEffect.AnimationDuration="300"
+                xct:TouchEffect.NativeAnimation="True"
+                xct:TouchEffect.PressedBackgroundColor="#121212"
+                HeightRequest="48"
+                HorizontalOptions="EndAndExpand"
+                TranslationX="-6"
+                WidthRequest="48">
+
+                <Image
+                    HorizontalOptions="Center"
+                    Source="{StaticResource icon_notification_solid}"
+                    VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+
+            <StackLayout
+                xct:TouchEffect.AnimationDuration="300"
+                xct:TouchEffect.NativeAnimation="True"
+                xct:TouchEffect.PressedBackgroundColor="#121212"
+                HeightRequest="48"
+                HorizontalOptions="End"
+                WidthRequest="48">
+
+                <Image
+                    HorizontalOptions="Center"
+                    Source="{StaticResource icon_search_outline}"
+                    VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <!--#endregion-->
+
+    <Grid
+        ColumnDefinitions="21*,58*,21*"
+        RowDefinitions="48,*,51,16">
+
+        <!--<ScrollView
+            Grid.RowSpan="4"
+            Grid.ColumnSpan="3">-->
+        <sha:ViewSwitcher
+            x:Name="Switcher"
+            Grid.RowSpan="4"
+            Grid.ColumnSpan="3"
+            Animate="True"
+            SelectedIndex="{Binding SelectedViewModelIndex, Mode=TwoWay}" />
+        <!--</ScrollView>-->
+
+        <!--#region Elegant TabView-->
+        <sha:MaterialFrame
+            Grid.Row="2"
+            Grid.Column="1"
+            Padding="0"
+            CornerRadius="25"
+            MaterialTheme="AcrylicBlur">
+
+            <sha:TabHostView
+                IsSegmented="True"
+                SelectedIndex="{Binding Source={x:Reference Switcher}, Path=SelectedIndex, Mode=TwoWay}"
+                Shades="{sha:SingleShade Offset='0,0',
+                                         BlurRadius=0,
+                                         Color={StaticResource col_qua},
+                                         Opacity=0.5}"
+                TabType="Fixed">
+
+                <sha:TabHostView.Tabs>
+
+                    <sha:BottomTabItem
+                        IconImageSource="{StaticResource icon_tab_book_solid}"
+                        IconSize="21"
+                        IsTextVisible="False"
+                        SelectedTabColor="{DynamicResource col_sec}"
+                        UnselectedIconColor="{DynamicResource col_non}" />
+
+                    <sha:BottomTabItem
+                        IconImageSource="{StaticResource icon_tab_bookmark_solid}"
+                        IconSize="21"
+                        IsTextVisible="False"
+                        SelectedTabColor="{DynamicResource col_sec}"
+                        UnselectedIconColor="{DynamicResource col_non}" />
+
+                    <sha:BottomTabItem
+                        IconImageSource="{StaticResource icon_tab_audio_solid}"
+                        IconSize="21"
+                        IsTextVisible="False"
+                        SelectedTabColor="{DynamicResource col_sec}"
+                        UnselectedIconColor="{DynamicResource col_non}" />
+
+                    <sha:BottomTabItem
+                        IconImageSource="{StaticResource icon_tab_profile_solid}"
+                        IconSize="21"
+                        IsTextVisible="False"
+                        SelectedTabColor="{DynamicResource col_sec}"
+                        UnselectedIconColor="{DynamicResource col_non}" />
+
+                </sha:TabHostView.Tabs>
+            </sha:TabHostView>
+        </sha:MaterialFrame>
+        <!--#endregion-->
+    </Grid>
+</ContentPage>

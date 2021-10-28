@@ -1,11 +1,11 @@
-﻿using XF_Heybook;
-using XF_HeyBook.ViewModels;
+﻿using XF_Heybook.ViewModels;
 
-namespace XF_HeyBook.Utility
+namespace XF_Heybook.Utility
 {
     public static class ViewModelLocator
     {
-        public static AudioBookViewModel AudioBookViewModel { get; set; } = new AudioBookViewModel(App.NavigationService, App.BookDataService, App.CategoryDataService);
-        public static AudioBookDetailViewModel AudioBookDetailViewModel { get; set; } = new AudioBookDetailViewModel(App.NavigationService, App.BookDataService);
+        public static MainHeyBookViewModel MainHeyBookViewModel { get; set; } = new MainHeyBookViewModel(App.NavigationService, App.BookDataService, App.CategoryDataService);
+        public static MainHeyBookDetailViewModel MainHeyBookDetailViewModel { get; set; } = new MainHeyBookDetailViewModel(App.NavigationService, App.BookDataService);
+        public static TabManagerViewModel TabManagerViewModel { get; set; } = new TabManagerViewModel(App.NavigationService, App.BookDataService, App.CategoryDataService);
     }
 }

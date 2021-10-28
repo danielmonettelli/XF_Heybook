@@ -1,7 +1,7 @@
-﻿using XF_HeyBook.Models;
+﻿using XF_Heybook.Models;
 using System.Collections.Generic;
 
-namespace XF_HeyBook.Services
+namespace XF_Heybook.Services
 {
     public class BookDataService : IBookDataService
     {

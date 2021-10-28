@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace XF_HeyBook.Views.Books
+namespace XF_Heybook.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Styles : ResourceDictionary
+    public partial class ProfileHeyBookPage : ContentPage
     {
-        public Styles()
+        public ProfileHeyBookPage()
         {
             InitializeComponent();
         }

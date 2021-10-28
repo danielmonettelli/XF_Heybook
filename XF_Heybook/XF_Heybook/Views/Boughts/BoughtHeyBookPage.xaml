@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="XF_Heybook.Views.BoughtHeyBookPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:sha="http://sharpnado.com"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    ios:Page.UseSafeArea="True"
+    BackgroundColor="{StaticResource col_background}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary Source="/Views/Styles.xaml" />
+    </ContentPage.Resources>
+
+    <!--#region TitleView-->
+    <NavigationPage.TitleView>
+        <StackLayout
+            Orientation="Horizontal"
+            Spacing="6">
+            <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On
+                        Platform="Android"
+                        Value="0,0,8,0" />
+
+                    <On
+                        Platform="iOS"
+                        Value="0" />
+                </OnPlatform>
+            </StackLayout.Padding>
+
+            <Image
+                HorizontalOptions="Center"
+                Source="{StaticResource icon_hey_book_brand_solid}"
+                VerticalOptions="CenterAndExpand" />
+
+            <Label VerticalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            Style="{StaticResource Span_TxtHeadline5_1}"
+                            Text="Hey" />
+
+                        <Span
+                            Style="{StaticResource Span_TxtHeadline5_2}"
+                            Text="Book" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <StackLayout
+                xct:TouchEffect.AnimationDuration="300"
+                xct:TouchEffect.NativeAnimation="True"
+                xct:TouchEffect.PressedBackgroundColor="#121212"
+                HeightRequest="48"
+                HorizontalOptions="EndAndExpand"
+                TranslationX="2"
+                WidthRequest="48">
+
+                <Image
+                    HorizontalOptions="Center"
+                    Source="{StaticResource icon_navigation_notification_solid}"
+                    VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+
+            <StackLayout
+                xct:TouchEffect.AnimationDuration="300"
+                xct:TouchEffect.NativeAnimation="True"
+                xct:TouchEffect.PressedBackgroundColor="#121212"
+                HeightRequest="48"
+                HorizontalOptions="End"
+                WidthRequest="48">
+
+                <Image
+                    HorizontalOptions="Center"
+                    Source="{StaticResource icon_search_outline}"
+                    VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <!--#endregion-->
+
+    <Grid
+        ColumnDefinitions="21*,58*,21*"
+        RowDefinitions="51,*,51,16">
+
+        <ScrollView
+            Grid.RowSpan="4"
+            Grid.ColumnSpan="3"
+            Orientation="Vertical"
+            VerticalScrollBarVisibility="Never">
+            <ScrollView.Padding>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On
+                        Platform="Android"
+                        Value="0,12,0,67" />
+                    <On
+                        Platform="iOS"
+                        Value="0,12,0,47" />
+                </OnPlatform>
+            </ScrollView.Padding>
+
+            <!--#region Bought List-->
+            <StackLayout BindableLayout.ItemsSource="{Binding Books}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <sha:Shadows
+                            Padding="0,0,3,2"
+                            HeightRequest="110">
+                            <sha:Shadows.Shades>
+                                <sha:ImmutableShades>
+                                    <sha:Shade
+                                        BlurRadius="6"
+                                        Opacity="1"
+                                        Offset="2,3"
+                                        Color="{StaticResource col_shadow_surface}" />
+                                </sha:ImmutableShades>
+                            </sha:Shadows.Shades>
+                            <Grid
+                                Margin="10,0,10,12"
+                                BackgroundColor="{StaticResource col_surface}"
+                                ColumnDefinitions="77, *, 10, Auto"
+                                RowDefinitions="Auto, *, Auto">
+
+                                <ffimageloadingsvg:SvgCachedImage
+                                    Grid.Row="0"
+                                    Grid.RowSpan="3"
+                                    Grid.Column="0"
+                                    Aspect="AspectFill"
+                                    CacheType="All"
+                                    Source="{Binding Image_Book}" />
+
+                                <StackLayout
+                                    Grid.Row="0"
+                                    Grid.RowSpan="3"
+                                    Grid.Column="1"
+                                    Padding="10,8,0,0"
+                                    Spacing="4">
+                                    <Label
+                                        MaxLines="2"
+                                        Style="{StaticResource TxtSubtitle2_2}"
+                                        Text="{Binding Name_Book}" />
+
+                                    <Label
+                                        MaxLines="1"
+                                        Style="{StaticResource TxtOverline1_2}"
+                                        Text="{Binding Author_Book}" />
+                                </StackLayout>
+
+                                <StackLayout
+                                    Grid.Row="0"
+                                    Grid.Column="3"
+                                    Padding="8,5"
+                                    BackgroundColor="{StaticResource col_sext}"
+                                    HorizontalOptions="End"
+                                    Orientation="Horizontal">
+
+                                    <Label
+                                        HorizontalTextAlignment="Center"
+                                        Style="{StaticResource TxtBody1_1}"
+                                        Text="{Binding Price_Book, StringFormat='{0:C2}'}"
+                                        VerticalTextAlignment="Center" />
+                                </StackLayout>
+
+                                <StackLayout
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Padding="12,5"
+                                    BackgroundColor="{StaticResource col_prim}"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="End">
+                                    <Label
+                                        Style="{StaticResource TxtSubtitle1_7}"
+                                        Text="Buy now" />
+                                </StackLayout>
+
+                                <StackLayout
+                                    Grid.Row="1"
+                                    Grid.RowSpan="2"
+                                    Grid.Column="3"
+                                    Padding="0,0,10,10"
+                                    HorizontalOptions="EndAndExpand"
+                                    Orientation="Horizontal"
+                                    Spacing="2"
+                                    VerticalOptions="End">
+                                    <Image
+                                        Margin="0,0,3,0"
+                                        xct:IconTintColorEffect.TintColor="{StaticResource col_prim}"
+                                        Source="{StaticResource icon_star_solid}"
+                                        TranslationY="-3" />
+
+                                    <Label
+                                        Style="{StaticResource TxtBody2_4}"
+                                        Text="{Binding Popularity_Level_Book}"
+                                        VerticalTextAlignment="End" />
+
+                                    <Label
+                                        Style="{StaticResource TxtBody2_5}"
+                                        Text="{Binding Popularity_Counter_Book, StringFormat='({0})'}"
+                                        VerticalTextAlignment="End" />
+                                </StackLayout>
+                                <!--
+                                <BoxView
+                                    Grid.RowSpan="3"
+                                    Grid.ColumnSpan="5"
+                                    xct:TouchEffect.HoveredBackgroundColor="Black"
+                                    xct:TouchEffect.NativeAnimationColor="Black"
+                                    BackgroundColor="Red" />
+                                -->
+                            </Grid>
+                        </sha:Shadows>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </ScrollView>
+        <!--#endregion-->
+
+        <!--#region Elegant TabView-->
+        <sha:TabHostView
+            Grid.Row="2"
+            Grid.Column="1"
+            BackgroundColor="{StaticResource col_shadow_surface}"
+            CornerRadius="25"
+            IsSegmented="True"
+            Shades="{sha:SingleShade Offset='0,3',
+                                     BlurRadius=6,
+                                     Color={StaticResource col_shadow_surface},
+                                     Opacity=1}"
+            TabType="Fixed">
+
+            <sha:TabHostView.Tabs>
+
+                <sha:BottomTabItem
+                    IconImageSource="{StaticResource icon_tab_book_solid}"
+                    IconSize="21"
+                    IsTextVisible="False"
+                    SelectedTabColor="{DynamicResource col_qui}"
+                    UnselectedIconColor="{DynamicResource col_sept}" />
+
+                <sha:BottomTabItem
+                    IconImageSource="{StaticResource icon_tab_bookmark_solid}"
+                    IconSize="21"
+                    IsTextVisible="False"
+                    SelectedTabColor="{DynamicResource col_qui}"
+                    UnselectedIconColor="{DynamicResource col_sept}" />
+
+                <sha:BottomTabItem
+                    IconImageSource="{StaticResource icon_tab_audio_solid}"
+                    IconSize="21"
+                    IsTextVisible="False"
+                    SelectedTabColor="{DynamicResource col_qui}"
+                    UnselectedIconColor="{DynamicResource col_sept}" />
+
+                <sha:BottomTabItem
+                    IconImageSource="{StaticResource icon_tab_profile_solid}"
+                    IconSize="21"
+                    IsTextVisible="False"
+                    SelectedTabColor="{DynamicResource col_qui}"
+                    UnselectedIconColor="{DynamicResource col_sept}" />
+
+            </sha:TabHostView.Tabs>
+        </sha:TabHostView>
+        <!--#endregion-->
+    </Grid>
+</ContentPage>
