@@ -2,67 +2,165 @@
 <ResourceDictionary
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:FontIcons="clr-namespace:XF_HeyBook.CodeFontIcons;assembly=XF_HeyBook">
+    xmlns:FontIcons="clr-namespace:XF_Heybook.CodeFontIcons;assembly=XF_HeyBook">
 
     <!--#region FontImageSource TABS-->
     <FontImageSource
-        x:Key="icon_tab_books"
+        x:Key="icon_tab_book_solid"
         FontFamily="CustomFontIcons"
-        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_books}"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_book_solid}"
         Size="21" />
 
     <FontImageSource
-        x:Key="icon_tab_saved"
+        x:Key="icon_tab_bookmark_solid"
         FontFamily="CustomFontIcons"
-        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_saved}"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_bookmark_solid}"
         Size="21" />
 
     <FontImageSource
-        x:Key="icon_tab_audio"
+        x:Key="icon_tab_audio_solid"
         FontFamily="CustomFontIcons"
-        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_audio}"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_audio_solid}"
         Size="21" />
 
     <FontImageSource
-        x:Key="icon_tab_profile"
+        x:Key="icon_tab_profile_solid"
         FontFamily="CustomFontIcons"
-        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_profile}"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_tab_profile_solid}"
         Size="21" />
     <!--#endregion-->
 
     <!--#region FontImageSource INTERFACES-->
     <FontImageSource
-        x:Key="icon_moore"
+        x:Key="icon_hey_book_brand_solid"
         FontFamily="CustomFontIcons"
-        Glyph="{x:Static FontIcons:CustomFontIcons.icon_moore}"
-        Size="4"
-        Color="{StaticResource col_sec}" />
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_hey_book_brand_solid}"
+        Size="32"
+        Color="{StaticResource col_ter}" />
 
     <FontImageSource
-        x:Key="icon_star"
+        x:Key="icon_search_outline"
         FontFamily="CustomFontIcons"
-        Glyph="{x:Static FontIcons:CustomFontIcons.icon_star}"
-        Size="12.8" />
-
-    <FontImageSource
-        x:Key="icon_left_arrow_line"
-        FontFamily="CustomFontIcons"
-        Glyph="{x:Static FontIcons:CustomFontIcons.icon_left_arrow_line}"
-        Size="26"
-        Color="{StaticResource col_sec}" />
-
-    <FontImageSource
-        x:Key="icon_play"
-        FontFamily="CustomFontIcons"
-        Glyph="{x:Static FontIcons:CustomFontIcons.icon_play}"
-        Size="15.77"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_search_outline}"
+        Size="18"
         Color="{StaticResource col_qui}" />
 
     <FontImageSource
-        x:Key="icon_pause"
+        x:Key="icon_navigation_notification_solid"
         FontFamily="CustomFontIcons"
-        Glyph="{x:Static FontIcons:CustomFontIcons.icon_pause}"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_notification_solid}"
+        Size="20"
+        Color="{StaticResource col_qui}" />
+
+    <FontImageSource
+        x:Key="icon_star_solid"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_star_solid}"
+        Size="12.8" />
+
+    <FontImageSource
+        x:Key="icon_down_arrow_outline"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_down_arrow_outline}"
+        Size="13.5"
+        Color="{StaticResource col_qui}" />
+
+    <FontImageSource
+        x:Key="icon_bookmark_outline"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_bookmark_outline}"
+        Size="30.3"
+        Color="{StaticResource col_qui}" />
+
+    <FontImageSource
+        x:Key="icon_feather_skip_back_outline"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_feather_skip_back_outline}"
+        Size="27"
+        Color="{StaticResource col_ter}" />
+
+    <FontImageSource
+        x:Key="icon_feather_skip_forward_outline"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_feather_skip_forward_outline}"
+        Size="27"
+        Color="{StaticResource col_ter}" />
+
+    <FontImageSource
+        x:Key="icon_play_solid"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_play_solid}"
         Size="15.77"
+        Color="{StaticResource col_background}" />
+
+    <FontImageSource
+        x:Key="icon_pause_solid"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_pause_solid}"
+        Size="15.77"
+        Color="{StaticResource col_background}" />
+
+    <FontImageSource
+        x:Key="icon_listen_outline"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_listen_outline}"
+        Size="20"
+        Color="{StaticResource col_qui}" />
+
+    <FontImageSource
+        x:Key="icon_arrow_forward_outline"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_arrow_forward_outline}"
+        Size="18"
+        Color="{StaticResource col_ter}" />
+
+    <FontImageSource
+        x:Key="icon_user_solid"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_user_solid}"
+        Size="18"
+        Color="{StaticResource col_ter}" />
+
+    <FontImageSource
+        x:Key="icon_settings_solid"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_settings_solid}"
+        Size="18"
+        Color="{StaticResource col_ter}" />
+
+    <FontImageSource
+        x:Key="icon_notification_solid"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_notification_solid}"
+        Size="22.5"
+        Color="{StaticResource col_ter}" />
+
+    <FontImageSource
+        x:Key="icon_help_circle_solid"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_help_circle_solid}"
+        Size="18"
+        Color="{StaticResource col_ter}" />
+
+    <FontImageSource
+        x:Key="icon_information_circle_solid"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_information_circle_solid}"
+        Size="18"
+        Color="{StaticResource col_ter}" />
+
+    <FontImageSource
+        x:Key="icon_data_privacy_solid"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_data_privacy_solid}"
+        Size="24"
+        Color="{StaticResource col_ter}" />
+
+    <FontImageSource
+        x:Key="icon_log_out_outline"
+        FontFamily="CustomFontIcons"
+        Glyph="{x:Static FontIcons:CustomFontIcons.icon_log_out_outline}"
+        Size="18"
         Color="{StaticResource col_ter}" />
     <!--#endregion-->
 

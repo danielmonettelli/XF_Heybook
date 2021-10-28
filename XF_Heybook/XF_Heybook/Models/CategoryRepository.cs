@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace XF_HeyBook.Models
+namespace XF_Heybook.Models
 {
     public static class CategoryRepository
     {
@@ -11,6 +11,10 @@ namespace XF_HeyBook.Models
             {
                 Categories = new List<Category>
             {
+                new Category
+                {
+                    Name_Category="All"
+                },
                 new Category
                 {
                     Name_Category="New Arrivals"

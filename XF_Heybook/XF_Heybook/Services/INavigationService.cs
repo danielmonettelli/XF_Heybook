@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace XF_HeyBook.Services
+namespace XF_Heybook.Services
 {
     public interface INavigationService
     {

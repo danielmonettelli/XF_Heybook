@@ -7,7 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XF_Heybook.Android", "XF_He
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XF_Heybook.iOS", "XF_Heybook\XF_Heybook.iOS\XF_Heybook.iOS.csproj", "{DD2AE660-334E-4BC7-AB2A-CA96D9510239}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XF_Heybook", "XF_Heybook\XF_Heybook\XF_Heybook.csproj", "{98BDDC8F-A029-4076-BC1F-D226770AEF7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XF_Heybook", "XF_Heybook\XF_Heybook\XF_Heybook.csproj", "{98BDDC8F-A029-4076-BC1F-D226770AEF7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FA4FED5B-9DC0-408E-9400-2F173204740D}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

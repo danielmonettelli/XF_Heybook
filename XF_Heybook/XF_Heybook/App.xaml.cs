@@ -1,9 +1,9 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using XF_HeyBook.Services;
-using XF_HeyBook.Utility;
-using XF_HeyBook.Views;
+using XF_Heybook.Views;
+using XF_Heybook.Services;
+using XF_Heybook.Utility;
 
 namespace XF_Heybook
 {
@@ -17,14 +17,15 @@ namespace XF_Heybook
         {
             InitializeComponent();
 
-            NavigationService.Configure(ViewNames.AudioBookPage, typeof(AudioBookPage));
-            NavigationService.Configure(ViewNames.AudioBookDetailPage, typeof(AudioBookDetailPage));
+            NavigationService.Configure(ViewNames.MainHeyBookPage, typeof(MainHeyBookPage));
+            NavigationService.Configure(ViewNames.MainHeyBookDetailPage, typeof(MainHeyBookDetailPage));
+            NavigationService.Configure(ViewNames.TabManagerPage, typeof(TabManagerPage));
 
             Sharpnado.MaterialFrame.Initializer.Initialize(loggerEnable: false, false);
             Sharpnado.Tabs.Initializer.Initialize(false, false);
             Sharpnado.Shades.Initializer.Initialize(loggerEnable: false);
 
-            MainPage = new NavigationPage(new AudioBookPage());
+            MainPage = new NavigationPage(new MainHeyBookPage());
         }
 
         protected override void OnStart()

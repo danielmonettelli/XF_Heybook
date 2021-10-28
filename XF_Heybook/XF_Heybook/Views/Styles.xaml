@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ResourceDictionary
-    x:Class="XF_HeyBook.Views.Books.Styles"
+    x:Class="XF_Heybook.Views.Styles"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
@@ -35,11 +35,19 @@
     </Style>
 
     <Style
+        x:Key="TxtHeadline5_1"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#700" />
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
+    </Style>
+
+    <Style
         x:Key="Span_TxtHeadline5_2"
         TargetType="Span">
-        <Setter Property="FontFamily" Value="Montserrat#400" />
+        <Setter Property="FontFamily" Value="Montserrat#500" />
         <Setter Property="FontSize" Value="24" />
-        <Setter Property="TextColor" Value="{StaticResource col_sec}" />
+        <Setter Property="TextColor" Value="{StaticResource col_qui}" />
     </Style>
     <!--#endregion-->
 
@@ -53,10 +61,18 @@
         <Setter Property="TextColor" Value="{StaticResource col_ter}" />
         <!--  Shadows  -->
         <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_ter}" />
+        <Setter Property="xct:ShadowEffect.Opacity" Value="0.8" />
         <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
         <Setter Property="xct:ShadowEffect.OffsetY" Value="3" />
-        <Setter Property="xct:ShadowEffect.Opacity" Value="0.8" />
         <Setter Property="xct:ShadowEffect.Radius" Value="6" />
+    </Style>
+
+    <Style
+        x:Key="TxtHeadline6_2"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#500" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
     </Style>
     <!--#endregion-->
 
@@ -72,13 +88,7 @@
         TargetType="Label">
         <Setter Property="FontFamily" Value="Montserrat#600" />
         <Setter Property="FontSize" Value="16" />
-        <Setter Property="TextColor" Value="{StaticResource col_sec}" />
-        <!--  Shadows  -->
-        <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_sec}" />
-        <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
-        <Setter Property="xct:ShadowEffect.OffsetY" Value="0" />
-        <Setter Property="xct:ShadowEffect.Opacity" Value="1" />
-        <Setter Property="xct:ShadowEffect.Radius" Value="18" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
     </Style>
 
     <Style
@@ -86,14 +96,8 @@
         TargetType="Label">
         <Setter Property="FontFamily" Value="Montserrat#400" />
         <Setter Property="FontSize" Value="16" />
-        <Setter Property="TextColor" Value="{StaticResource col_sec}" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
         <Setter Property="Opacity" Value="0.7" />
-        <!--  Shadows  -->
-        <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_qui}" />
-        <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
-        <Setter Property="xct:ShadowEffect.OffsetY" Value="3" />
-        <Setter Property="xct:ShadowEffect.Opacity" Value="0.7" />
-        <Setter Property="xct:ShadowEffect.Radius" Value="6" />
     </Style>
 
     <Style
@@ -105,16 +109,61 @@
         <Setter Property="Opacity" Value="0.8" />
         <!--  Shadows  -->
         <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_ter}" />
+        <Setter Property="xct:ShadowEffect.Opacity" Value="0.7" />
         <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
         <Setter Property="xct:ShadowEffect.OffsetY" Value="3" />
-        <Setter Property="xct:ShadowEffect.Opacity" Value="0.7" />
         <Setter Property="xct:ShadowEffect.Radius" Value="6" />
     </Style>
 
     <Style
         x:Key="TxtSubtitle1_4"
         TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#600" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="TextColor" Value="{StaticResource col_qui}" />
+    </Style>
+
+    <Style
+        x:Key="TxtSubtitle1_5"
+        TargetType="Label">
         <Setter Property="FontFamily" Value="Montserrat#400" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="TextColor" Value="{StaticResource col_qui}" />
+        <Setter Property="Opacity" Value="0.7" />
+
+    </Style>
+
+    <Style
+        x:Key="TxtSubtitle1_6"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#400" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="TextColor" Value="{StaticResource col_qui}" />
+        <!--  Shadows  -->
+        <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_qui}" />
+        <Setter Property="xct:ShadowEffect.Opacity" Value="0.7" />
+        <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
+        <Setter Property="xct:ShadowEffect.OffsetY" Value="3" />
+        <Setter Property="xct:ShadowEffect.Radius" Value="6" />
+    </Style>
+
+    <Style
+        x:Key="TxtSubtitle1_7"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#500" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
+        <!--  Shadows  -->
+        <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_qui}" />
+        <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
+        <Setter Property="xct:ShadowEffect.OffsetY" Value="3" />
+        <Setter Property="xct:ShadowEffect.Radius" Value="6" />
+    </Style>
+
+    <Style
+        x:Key="TxtSubtitle1_8"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#600" />
         <Setter Property="FontSize" Value="16" />
         <Setter Property="TextColor" Value="{StaticResource col_ter}" />
     </Style>
@@ -122,15 +171,67 @@
 
 
     <!--#region Subtitle2-->
+    <Style
+        x:Key="TxtSubtitle2_1"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#600" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="{StaticResource col_qui}" />
+    </Style>
 
+    <Style
+        x:Key="TxtSubtitle2_2"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#600" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
+        <!--  Shadows  -->
+        <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_ter}" />
+        <Setter Property="xct:ShadowEffect.Opacity" Value="0.8" />
+        <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
+        <Setter Property="xct:ShadowEffect.OffsetY" Value="3" />
+        <Setter Property="xct:ShadowEffect.Radius" Value="6" />
+    </Style>
+
+    <Style
+        x:Key="TxtSubtitle2_3"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#500" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
+    </Style>
+
+    <Style
+        x:Key="TxtSubtitle2_4"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#600" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
+    </Style>
     <!--#endregion-->
 
 
     <!--#region Body1-->
     <Style
+        x:Key="TxtBody1_1"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#500" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
+    </Style>
+
+    <Style
         x:Key="TxtBody1_2"
         TargetType="Label">
         <Setter Property="FontFamily" Value="Montserrat#500" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
+    </Style>
+
+    <Style
+        x:Key="TxtBody1_3"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#400" />
         <Setter Property="FontSize" Value="16" />
         <Setter Property="TextColor" Value="{StaticResource col_ter}" />
     </Style>
@@ -143,7 +244,7 @@
         TargetType="Label">
         <Setter Property="FontFamily" Value="Montserrat#500" />
         <Setter Property="FontSize" Value="14" />
-        <Setter Property="TextColor" Value="{StaticResource col_sec}" />
+        <Setter Property="TextColor" Value="{StaticResource col_qui}" />
     </Style>
 
     <Style
@@ -151,14 +252,30 @@
         TargetType="Label">
         <Setter Property="FontFamily" Value="Montserrat#400" />
         <Setter Property="FontSize" Value="14" />
-        <Setter Property="TextColor" Value="{StaticResource col_sec}" />
-        <Setter Property="Opacity" Value="0.5" />
+        <Setter Property="TextColor" Value="{StaticResource col_qui}" />
+        <Setter Property="Opacity" Value="0.75" />
     </Style>
 
     <Style
         x:Key="TxtBody2_3"
         TargetType="Label">
         <Setter Property="FontFamily" Value="Montserrat#600" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
+    </Style>
+
+    <Style
+        x:Key="TxtBody2_4"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#500" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
+    </Style>
+
+    <Style
+        x:Key="TxtBody2_5"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#400" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="TextColor" Value="{StaticResource col_ter}" />
     </Style>
@@ -181,13 +298,43 @@
         TargetType="Label">
         <Setter Property="FontFamily" Value="Montserrat#600" />
         <Setter Property="FontSize" Value="10" />
-        <Setter Property="TextColor" Value="{StaticResource col_sec}" />
+        <Setter Property="TextColor" Value="{StaticResource col_qui}" />
         <!--  Shadows  -->
         <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_prim}" />
         <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
         <Setter Property="xct:ShadowEffect.OffsetY" Value="3" />
-        <Setter Property="xct:ShadowEffect.Opacity" Value="1" />
         <Setter Property="xct:ShadowEffect.Radius" Value="6" />
+    </Style>
+
+    <Style
+        x:Key="TxtOverline1_2"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#600" />
+        <Setter Property="FontSize" Value="10" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
+        <Setter Property="Opacity" Value="0.8" />
+        <!--  Shadows  -->
+        <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_ter}" />
+        <Setter Property="xct:ShadowEffect.Opacity" Value="0.7" />
+        <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
+        <Setter Property="xct:ShadowEffect.OffsetY" Value="3" />
+        <Setter Property="xct:ShadowEffect.Radius" Value="6" />
+    </Style>
+
+    <Style
+        x:Key="TxtOverline1_3"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#600" />
+        <Setter Property="FontSize" Value="10" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
+    </Style>
+
+    <Style
+        x:Key="TxtOverline1_4"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="Montserrat#600" />
+        <Setter Property="FontSize" Value="10" />
+        <Setter Property="TextColor" Value="{StaticResource col_ter}" />
     </Style>
     <!--#endregion-->
 
@@ -198,12 +345,12 @@
         TargetType="Label">
         <Setter Property="FontFamily" Value="Montserrat#400" />
         <Setter Property="FontSize" Value="8" />
-        <Setter Property="TextColor" Value="{StaticResource col_sec}" />
+        <Setter Property="TextColor" Value="{StaticResource col_qui}" />
         <!--  Shadows  -->
-        <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_sext}" />
+        <Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_qui}" />
+        <Setter Property="xct:ShadowEffect.Opacity" Value="0.9" />
         <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
         <Setter Property="xct:ShadowEffect.OffsetY" Value="3" />
-        <Setter Property="xct:ShadowEffect.Opacity" Value="1" />
         <Setter Property="xct:ShadowEffect.Radius" Value="6" />
     </Style>
     <!--#endregion-->
@@ -221,13 +368,13 @@
                         <VisualState.Setters>
                             <Setter Property="FontFamily" Value="Montserrat#400" />
                             <Setter Property="FontSize" Value="16" />
-                            <Setter Property="TextColor" Value="{StaticResource col_sec}" />
+                            <Setter Property="TextColor" Value="{StaticResource col_ter}" />
                             <Setter Property="Opacity" Value="0.7" />
                             <!--  Shadows  -->
                             <!--<Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_qui}" />-->
+                            <Setter Property="xct:ShadowEffect.Opacity" Value="0.7" />
                             <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />
                             <Setter Property="xct:ShadowEffect.OffsetY" Value="3" />
-                            <Setter Property="xct:ShadowEffect.Opacity" Value="0.7" />
                             <Setter Property="xct:ShadowEffect.Radius" Value="6" />
                         </VisualState.Setters>
                     </VisualState>
@@ -236,7 +383,7 @@
                         <VisualState.Setters>
                             <Setter Property="FontFamily" Value="Montserrat#600" />
                             <Setter Property="FontSize" Value="16" />
-                            <Setter Property="TextColor" Value="{StaticResource col_sec}" />
+                            <Setter Property="TextColor" Value="{StaticResource col_ter}" />
                             <!--  Shadows  -->
                             <!--<Setter Property="xct:ShadowEffect.Color" Value="{StaticResource col_sec}" />-->
                             <Setter Property="xct:ShadowEffect.OffsetX" Value="0" />

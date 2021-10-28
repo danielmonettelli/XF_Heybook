@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using XF_HeyBook.Utility;
+using XF_Heybook.Utility;
 
-namespace XF_HeyBook.Views
+namespace XF_Heybook.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AudioBookPage : ContentPage
+    public partial class MainHeyBookPage : ContentPage
     {
 
-        public AudioBookPage()
+        public MainHeyBookPage()
         {
             InitializeComponent();
-            BindingContext = ViewModelLocator.AudioBookViewModel;
+            BindingContext = ViewModelLocator.MainHeyBookViewModel;
         }
 
         private void TapGestureRecognizer_StackLayout_Tapped(object sender, EventArgs e)

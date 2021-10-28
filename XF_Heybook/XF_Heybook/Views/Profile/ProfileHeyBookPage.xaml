@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XF_Heybook.Views.ProfileHeyBookPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:fftrans="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:sha="http://sharpnado.com"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    ios:Page.UseSafeArea="True"
+    BackgroundColor="{StaticResource col_background}"
+    NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary Source="/Views/Styles.xaml" />
+    </ContentPage.Resources>
+
+    <!--#region Layer0 ScrollView and TabView-->
+    <Grid
+        ColumnDefinitions="21*,58*,21*"
+        RowDefinitions="51,*,51,16">
+
+        <!--#region Layer 1-->
+        <ScrollView
+            Grid.RowSpan="4"
+            Grid.ColumnSpan="3"
+            Padding="0,0,0,77"
+            VerticalScrollBarVisibility="Never">
+
+            <!--#region Layer2(Main)-->
+            <Grid
+                RowDefinitions="130,*"
+                RowSpacing="65">
+                <!--#region Layer3 Up-->
+                <Grid
+                    Grid.Row="0"
+                    Padding="0,20,0,0"
+                    BackgroundColor="{StaticResource col_prim}"
+                    ColumnDefinitions="10,40,28,10,*,10,102,4,10"
+                    RowDefinitions="68,64"
+                    RowSpacing="12">
+
+                    <!--#region Image-->
+                    <ffimageloading:CachedImage
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        CacheType="All"
+                        Source="{xct:ImageResource Id=XF_Heybook.Resources.Images.DanielMonettelli.jpg}">
+                        <ffimageloading:CachedImage.Transformations>
+                            <fftrans:CircleTransformation />
+                        </ffimageloading:CachedImage.Transformations>
+                    </ffimageloading:CachedImage>
+                    <!--#endregion-->
+
+                    <!--#region Name and Hotmail-->
+                    <StackLayout
+                        Grid.Row="0"
+                        Grid.Column="4"
+                        Spacing="4"
+                        TranslationY="11">
+                        <Label
+                            MaxLines="2"
+                            Style="{StaticResource TxtSubtitle1_8}"
+                            Text="Daniel A. Monettelli L." />
+
+                        <Label
+                            Style="{StaticResource TxtOverline1_3}"
+                            Text="null@hotmail.com" />
+                    </StackLayout>
+                    <!--#endregion-->
+
+                    <!--#region Premium-->
+                    <BoxView
+                        Grid.Row="0"
+                        Grid.Column="6"
+                        BackgroundColor="{StaticResource col_ter}"
+                        CornerRadius="5"
+                        HeightRequest="28"
+                        Opacity="0.12"
+                        TranslationX="-10"
+                        TranslationY="8"
+                        VerticalOptions="CenterAndExpand" />
+
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="6"
+                        HorizontalTextAlignment="Center"
+                        Style="{StaticResource TxtOverline1_4}"
+                        Text="Premium"
+                        TranslationX="-10"
+                        TranslationY="8"
+                        VerticalTextAlignment="Center" />
+                    <!--#endregion-->
+
+                    <!--#region Purchases, Saved and Listen-->
+                    <sha:Shadows
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Grid.ColumnSpan="6"
+                        CornerRadius="10">
+                        <sha:Shadows.Shades>
+                            <sha:ImmutableShades>
+                                <sha:Shade
+                                    BlurRadius="6"
+                                    Opacity="1"
+                                    Offset="0,3"
+                                    Color="{StaticResource col_qua}" />
+                            </sha:ImmutableShades>
+                        </sha:Shadows.Shades>
+                        <Grid
+                            ColumnDefinitions="10,*,1,*,1,*,10"
+                            ColumnSpacing="10"
+                            RowDefinitions="12,40,12">
+                            <BoxView
+                                Grid.RowSpan="3"
+                                Grid.ColumnSpan="7"
+                                BackgroundColor="{StaticResource col_sec}"
+                                CornerRadius="10" />
+
+                            <StackLayout
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Spacing="8">
+                                <Label
+                                    HorizontalTextAlignment="Center"
+                                    Style="{StaticResource TxtSubtitle2_4}"
+                                    Text="39" />
+                                <Label
+                                    HorizontalTextAlignment="Center"
+                                    Style="{StaticResource TxtOverline1_4}"
+                                    Text="Purchases" />
+                            </StackLayout>
+
+                            <BoxView
+                                Grid.Row="1"
+                                Grid.Column="2"
+                                Margin="0,4"
+                                BackgroundColor="{StaticResource col_ter}"
+                                Opacity="0.65" />
+
+                            <StackLayout
+                                Grid.Row="1"
+                                Grid.Column="3"
+                                Spacing="8">
+                                <Label
+                                    HorizontalTextAlignment="Center"
+                                    Style="{StaticResource TxtSubtitle2_4}"
+                                    Text="43" />
+                                <Label
+                                    HorizontalTextAlignment="Center"
+                                    Style="{StaticResource TxtOverline1_4}"
+                                    Text="Saved" />
+                            </StackLayout>
+
+                            <BoxView
+                                Grid.Row="1"
+                                Grid.Column="4"
+                                Margin="0,4"
+                                BackgroundColor="{StaticResource col_ter}"
+                                Opacity="0.65" />
+
+                            <StackLayout
+                                Grid.Row="1"
+                                Grid.Column="5"
+                                Spacing="8">
+                                <Label
+                                    HorizontalTextAlignment="Center"
+                                    Style="{StaticResource TxtSubtitle2_4}"
+                                    Text="+300 hrs." />
+                                <Label
+                                    HorizontalTextAlignment="Center"
+                                    Style="{StaticResource TxtOverline1_4}"
+                                    Text="Listen" />
+                            </StackLayout>
+
+                        </Grid>
+
+                    </sha:Shadows>
+                    <!--#endregion-->
+                </Grid>
+                <!--#endregion-->
+
+                <!--#region Layer3 Down-->
+                <Grid
+                    Grid.Row="1"
+                    RowDefinitions="Auto,48,48,48,8,1,8,48,48,48,8,1,8,48"
+                    RowSpacing="8">
+                    <Label
+                        Grid.Row="0"
+                        Padding="10,0"
+                        Style="{StaticResource TxtHeadline5_1}"
+                        Text="Settings" />
+
+                    <!--  Edit Profile  -->
+                    <StackLayout
+                        Grid.Row="1"
+                        Padding="10,0"
+                        xct:TouchEffect.NativeAnimation="True"
+                        Orientation="Horizontal"
+                        Spacing="16"
+                        TranslationY="2">
+                        <Image Source="{StaticResource icon_user_solid}" />
+
+                        <Label
+                            Style="{StaticResource TxtSubtitle2_3}"
+                            Text="Edit Profile"
+                            VerticalTextAlignment="Center" />
+
+                        <Image
+                            HorizontalOptions="EndAndExpand"
+                            Source="{StaticResource icon_arrow_forward_outline}" />
+                    </StackLayout>
+
+                    <!--  Account settings  -->
+                    <StackLayout
+                        Grid.Row="2"
+                        Padding="10,0"
+                        xct:TouchEffect.NativeAnimation="True"
+                        Orientation="Horizontal"
+                        Spacing="16">
+                        <Image Source="{StaticResource icon_settings_solid}" />
+
+                        <Label
+                            Style="{StaticResource TxtSubtitle2_3}"
+                            Text="Account settings"
+                            VerticalTextAlignment="Center" />
+
+                        <Image
+                            HorizontalOptions="EndAndExpand"
+                            Source="{StaticResource icon_arrow_forward_outline}" />
+                    </StackLayout>
+
+                    <!--  Notifications  -->
+                    <StackLayout
+                        Grid.Row="3"
+                        Padding="10,0"
+                        xct:TouchEffect.NativeAnimation="True"
+                        Orientation="Horizontal"
+                        Spacing="16">
+                        <Image Source="{StaticResource icon_notification_solid}" />
+
+                        <Label
+                            Style="{StaticResource TxtSubtitle2_3}"
+                            Text="Notifications"
+                            VerticalTextAlignment="Center" />
+
+                        <Image
+                            HorizontalOptions="EndAndExpand"
+                            Source="{StaticResource icon_arrow_forward_outline}" />
+                    </StackLayout>
+
+                    <BoxView
+                        Grid.Row="5"
+                        BackgroundColor="{StaticResource col_ter}"
+                        Opacity="0.45" />
+
+                    <!--  Help  -->
+                    <StackLayout
+                        Grid.Row="7"
+                        Padding="10,0"
+                        xct:TouchEffect.NativeAnimation="True"
+                        Orientation="Horizontal"
+                        Spacing="16">
+                        <Image Source="{StaticResource icon_help_circle_solid}" />
+
+                        <Label
+                            Style="{StaticResource TxtSubtitle2_3}"
+                            Text="Help"
+                            VerticalTextAlignment="Center" />
+
+                        <Image
+                            HorizontalOptions="EndAndExpand"
+                            Source="{StaticResource icon_arrow_forward_outline}" />
+                    </StackLayout>
+
+                    <!--  Info  -->
+                    <StackLayout
+                        Grid.Row="8"
+                        Padding="10,0"
+                        xct:TouchEffect.NativeAnimation="True"
+                        Orientation="Horizontal"
+                        Spacing="16">
+                        <Image Source="{StaticResource icon_information_circle_solid}" />
+
+                        <Label
+                            Style="{StaticResource TxtSubtitle2_3}"
+                            Text="Info"
+                            VerticalTextAlignment="Center" />
+
+                        <Image
+                            HorizontalOptions="EndAndExpand"
+                            Source="{StaticResource icon_arrow_forward_outline}" />
+                    </StackLayout>
+
+                    <!--  Data Privacy  -->
+                    <StackLayout
+                        Grid.Row="9"
+                        Padding="10,0"
+                        xct:TouchEffect.NativeAnimation="True"
+                        Orientation="Horizontal"
+                        Spacing="16">
+                        <Image Source="{StaticResource icon_data_privacy_solid}" />
+
+                        <Label
+                            Style="{StaticResource TxtSubtitle2_3}"
+                            Text="Data Privacy"
+                            VerticalTextAlignment="Center" />
+
+                        <Image
+                            HorizontalOptions="EndAndExpand"
+                            Source="{StaticResource icon_arrow_forward_outline}" />
+                    </StackLayout>
+
+                    <BoxView
+                        Grid.Row="11"
+                        BackgroundColor="{StaticResource col_ter}"
+                        Opacity="0.45" />
+
+                    <!--  Log out  -->
+                    <StackLayout
+                        Grid.Row="13"
+                        Padding="10,0"
+                        xct:TouchEffect.NativeAnimation="True"
+                        Orientation="Horizontal"
+                        Spacing="16">
+                        <Image Source="{StaticResource icon_log_out_outline}" />
+
+                        <Label
+                            Style="{StaticResource TxtSubtitle2_3}"
+                            Text="Log out"
+                            VerticalTextAlignment="Center" />
+
+                        <Image
+                            HorizontalOptions="EndAndExpand"
+                            Source="{StaticResource icon_arrow_forward_outline}" />
+                    </StackLayout>
+                </Grid>
+                <!--#endregion-->
+            </Grid>
+            <!--#endregion-->
+        </ScrollView>
+        <!--#endregion-->
+
+        <!--#region Elegant TabView-->
+        <sha:TabHostView
+            Grid.Row="2"
+            Grid.Column="1"
+            BackgroundColor="{StaticResource col_shadow_surface}"
+            CornerRadius="25"
+            IsSegmented="True"
+            Shades="{sha:SingleShade Offset='0,3',
+                                     BlurRadius=6,
+                                     Color={StaticResource col_shadow_surface},
+                                     Opacity=1}"
+            TabType="Fixed">
+
+            <sha:TabHostView.Tabs>
+
+                <sha:BottomTabItem
+                    IconImageSource="{StaticResource icon_tab_book_solid}"
+                    IconSize="21"
+                    IsTextVisible="False"
+                    SelectedTabColor="{DynamicResource col_qui}"
+                    UnselectedIconColor="{DynamicResource col_sept}" />
+
+                <sha:BottomTabItem
+                    IconImageSource="{StaticResource icon_tab_bookmark_solid}"
+                    IconSize="21"
+                    IsTextVisible="False"
+                    SelectedTabColor="{DynamicResource col_qui}"
+                    UnselectedIconColor="{DynamicResource col_sept}" />
+
+                <sha:BottomTabItem
+                    IconImageSource="{StaticResource icon_tab_audio_solid}"
+                    IconSize="21"
+                    IsTextVisible="False"
+                    SelectedTabColor="{DynamicResource col_qui}"
+                    UnselectedIconColor="{DynamicResource col_sept}" />
+
+                <sha:BottomTabItem
+                    IconImageSource="{StaticResource icon_tab_profile_solid}"
+                    IconSize="21"
+                    IsTextVisible="False"
+                    SelectedTabColor="{DynamicResource col_qui}"
+                    UnselectedIconColor="{DynamicResource col_sept}" />
+
+            </sha:TabHostView.Tabs>
+        </sha:TabHostView>
+        <!--#endregion-->
+    </Grid>
+    <!--#endregion-->
+</ContentPage>

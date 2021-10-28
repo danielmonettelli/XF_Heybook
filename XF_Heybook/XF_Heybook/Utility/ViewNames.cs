@@ -1,8 +1,9 @@
-﻿namespace XF_HeyBook.Utility
+﻿namespace XF_Heybook.Utility
 {
     public class ViewNames
     {
-        public const string AudioBookPage = "AudioBookPage";
-        public const string AudioBookDetailPage = "AudioBookDetailPage";
+        public const string MainHeyBookPage = "MainHeyBookPage";
+        public const string MainHeyBookDetailPage = "MainHeyBookDetailPage";
+        public const string TabManagerPage = "TabManagerPage";
     }
 }

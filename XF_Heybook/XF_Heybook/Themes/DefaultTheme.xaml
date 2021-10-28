@@ -4,13 +4,17 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <Color x:Key="col_prim">#FFFF7948</Color>
-    <Color x:Key="col_sec">#FFFFFFFF</Color>
+    <Color x:Key="col_sec">#FFDECBC2</Color>
     <Color x:Key="col_ter">#FF6A2F19</Color>
-    <Color x:Key="col_qua">#FFBD5935</Color>
-    <Color x:Key="col_qui">#FFE9D7C6</Color>
-    <Color x:Key="col_sext">#E6D2CDCD</Color>
-    <Color x:Key="col_sept">#FF070707</Color>
-    <Color x:Key="col_oct">#FFFFDD4F</Color>
-    <Color x:Key="col_non">#FFD2AE9E</Color>
+    <Color x:Key="col_qua">#FF603E31</Color>
+    <Color x:Key="col_qui">#FFFFFFFF</Color>
+    <Color x:Key="col_sext">#FFFFE746</Color>
+    <Color x:Key="col_sept">#FFD2AE9E</Color>
+    <Color x:Key="col_oct">#FF070707</Color>
+    <Color x:Key="col_non">#FF245D42</Color>
+    <Color x:Key="col_background">#FFE9D7C6</Color>
+    <Color x:Key="col_surface">#FFEEC0A7</Color>
+    <Color x:Key="col_shadow_surface">#FFBD5935</Color>
+    <Color x:Key="col_notification">#FF257740</Color>
 
 </ResourceDictionary>

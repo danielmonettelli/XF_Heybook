@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace XF_HeyBook.Models
+namespace XF_Heybook.Models
 {
     public static class BookRepository
     {
@@ -18,7 +18,8 @@ namespace XF_HeyBook.Models
                     Price_Book=14.25,
                     Popularity_Level_Book=4.1,
                     Popularity_Counter_Book=94,
-                    Image_Book="https://raw.githubusercontent.com/danielmonettelli/Area51/640ac4569c9080669184da4c57f694ccf6541ed2/Books/SVGs/svg_brave_new_world.svg"
+                    Image_Book="https://raw.githubusercontent.com/danielmonettelli/Area51/640ac4569c9080669184da4c57f694ccf6541ed2/Books/SVGs/svg_brave_new_world.svg",
+                    InOffer=true
                 },
                 new Book
                 {
@@ -28,7 +29,8 @@ namespace XF_HeyBook.Models
                     Price_Book=19.45,
                     Popularity_Level_Book=5,
                     Popularity_Counter_Book=99,
-                    Image_Book="https://raw.githubusercontent.com/danielmonettelli/Area51/640ac4569c9080669184da4c57f694ccf6541ed2/Books/SVGs/svg_the_old_man_and_the_sea.svg"
+                    Image_Book="https://raw.githubusercontent.com/danielmonettelli/Area51/640ac4569c9080669184da4c57f694ccf6541ed2/Books/SVGs/svg_the_old_man_and_the_sea.svg",
+                    InOffer=false
                 },
                 new Book
                 {
@@ -38,7 +40,8 @@ namespace XF_HeyBook.Models
                     Price_Book=14.99,
                     Popularity_Level_Book=5,
                     Popularity_Counter_Book=58,
-                    Image_Book="https://raw.githubusercontent.com/danielmonettelli/Area51/640ac4569c9080669184da4c57f694ccf6541ed2/Books/SVGs/svg_1984.svg"
+                    Image_Book="https://raw.githubusercontent.com/danielmonettelli/Area51/640ac4569c9080669184da4c57f694ccf6541ed2/Books/SVGs/svg_1984.svg",
+                    InOffer=true
                 },
                 new Book
                 {
@@ -48,7 +51,8 @@ namespace XF_HeyBook.Models
                     Price_Book=19.99,
                     Popularity_Level_Book=4.6,
                     Popularity_Counter_Book=94,
-                    Image_Book="https://raw.githubusercontent.com/danielmonettelli/Area51/06e5ce0b954d4855bbc4a47cfb6c7c867b433616/Books/SVGs/svg_pride_and_prejudice.svg"
+                    Image_Book="https://raw.githubusercontent.com/danielmonettelli/Area51/06e5ce0b954d4855bbc4a47cfb6c7c867b433616/Books/SVGs/svg_pride_and_prejudice.svg",
+                    InOffer=false
                 },
                 new Book
                 {
@@ -58,7 +62,8 @@ namespace XF_HeyBook.Models
                     Price_Book=13.49,
                     Popularity_Level_Book=3.8,
                     Popularity_Counter_Book=88,
-                    Image_Book="https://raw.githubusercontent.com/danielmonettelli/Area51/06e5ce0b954d4855bbc4a47cfb6c7c867b433616/Books/SVGs/svg_the_lord_of_the_flies.svg"
+                    Image_Book="https://raw.githubusercontent.com/danielmonettelli/Area51/06e5ce0b954d4855bbc4a47cfb6c7c867b433616/Books/SVGs/svg_the_lord_of_the_flies.svg",
+                    InOffer=true
                 },
                 new Book
                 {
@@ -68,7 +73,8 @@ namespace XF_HeyBook.Models
                     Price_Book=22.49,
                     Popularity_Level_Book=4.0,
                     Popularity_Counter_Book=67,
-                    Image_Book="https://raw.githubusercontent.com/danielmonettelli/Area51/06e5ce0b954d4855bbc4a47cfb6c7c867b433616/Books/SVGs/svg_farenheit.svg"
+                    Image_Book="https://raw.githubusercontent.com/danielmonettelli/Area51/06e5ce0b954d4855bbc4a47cfb6c7c867b433616/Books/SVGs/svg_farenheit.svg",
+                    InOffer=false
                 }
                 };
             }

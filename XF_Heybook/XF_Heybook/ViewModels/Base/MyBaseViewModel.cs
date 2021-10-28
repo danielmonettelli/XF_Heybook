@@ -1,6 +1,6 @@
 ﻿using MvvmHelpers;
 
-namespace XF_HeyBook.ViewModels
+namespace XF_Heybook.ViewModels
 {
     public class MyBaseViewModel : BaseViewModel
     {
