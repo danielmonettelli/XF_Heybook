@@ -66,7 +66,7 @@
             <Label
                 Grid.Row="1"
                 Grid.Column="1"
-                Grid.ColumnSpan="3"
+                Grid.ColumnSpan="5"
                 HorizontalTextAlignment="Center"
                 MaxLines="2"
                 Style="{StaticResource TxtHeadline6_1}"
@@ -75,7 +75,7 @@
             <Label
                 Grid.Row="3"
                 Grid.Column="1"
-                Grid.ColumnSpan="3"
+                Grid.ColumnSpan="5"
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource TxtSubtitle1_3}"
                 Text="{Binding SelectedBook.Author_Book}" />
@@ -83,7 +83,7 @@
             <StackLayout
                 Grid.Row="5"
                 Grid.Column="1"
-                Grid.ColumnSpan="3"
+                Grid.ColumnSpan="5"
                 HorizontalOptions="CenterAndExpand"
                 Orientation="Horizontal"
                 Spacing="9">
@@ -108,7 +108,7 @@
                 x:Name="sliderMain"
                 Grid.Row="7"
                 Grid.Column="1"
-                Grid.ColumnSpan="3"
+                Grid.ColumnSpan="5"
                 Maximum="180"
                 MaximumTrackColor="{StaticResource col_sec}"
                 Minimum="0"
@@ -118,7 +118,7 @@
             <Label
                 Grid.Row="9"
                 Grid.Column="1"
-                Grid.ColumnSpan="3"
+                Grid.ColumnSpan="5"
                 HorizontalTextAlignment="Start"
                 Style="{StaticResource TxtBody2_3}"
                 Text="00.00" />
@@ -126,18 +126,14 @@
             <Label
                 Grid.Row="9"
                 Grid.Column="1"
-                Grid.ColumnSpan="3"
+                Grid.ColumnSpan="5"
                 HorizontalTextAlignment="End"
                 Style="{StaticResource TxtBody2_3}"
                 Text="{Binding Value, Source={x:Reference sliderMain}}" />
 
-            <BoxView
-                Grid.Row="10"
-                Grid.ColumnSpan="5" />
-
             <StackLayout
                 Grid.Row="11"
-                Grid.Column="1"
+                Grid.Column="2"
                 xct:TouchEffect.AnimationDuration="300"
                 xct:TouchEffect.NativeAnimation="True">
 
@@ -149,7 +145,7 @@
 
             <sha:Shadows
                 Grid.Row="11"
-                Grid.Column="2"
+                Grid.Column="3"
                 CornerRadius="25">
                 <sha:Shadows.Shades>
                     <sha:ImmutableShades>
@@ -174,7 +170,7 @@
 
             <StackLayout
                 Grid.Row="11"
-                Grid.Column="3"
+                Grid.Column="4"
                 xct:TouchEffect.AnimationDuration="300"
                 xct:TouchEffect.NativeAnimation="True">
 
@@ -184,10 +180,6 @@
                     VerticalOptions="CenterAndExpand" />
             </StackLayout>
 
-            <StackLayout
-                Grid.Row="13"
-                Grid.ColumnSpan="5"
-                BackgroundColor="Red" />
         </Grid>
         <!--#endregion-->
 
